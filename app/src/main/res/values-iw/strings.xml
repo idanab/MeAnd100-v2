@@ -1,0 +1,193 @@
+<resources>
+    <string name="app_name">אני ו\-100</string>
+    <!--important- do not change next 'google_app_id'!!!-->
+    <string name="google_app_id">AIzaSyAb5lPf1w8REr2XUy3dJ95ujFd2NyIbZD4</string>
+    <string name="gcm_defaultSenderId">162679940561</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">הגדרות</string>
+
+    <string name="hello_news_fragment">news will be here soon!</string>
+    <string name="hello_report_fragment">reports will be here soon!</string>
+    <string name="hello_settings_fragment">settings will be here soon!</string>
+    <string name="title_activity_general_report">GeneralReport</string>
+    <!--&lt;!&ndash; TABS &ndash;&gt;-->
+    <string name="settings_tab">הגדרות</string>
+    <string name="reports_tab">דיווח</string>
+    <string name="news_tab">עדכונים</string>
+    <string name="title_activity_more_details_report">more detail report</string>
+    <string name="send_button">שלח</string>
+
+    <!--&lt;!&ndash; ________________________________Reports Menu________________________________!&ndash;&gt;-->
+
+    <string name="terrorattack_report_button">Terror Attack</string>
+    <string name="accident_report_button">תאונת דרכים</string>
+    <string name="assult_report_button">הטרדה</string>
+    <string name="hijack_report_button">חטיפה</string>
+    <string name="fire_report_button">שריפה</string>
+    <string name="robbery_report_button">שוד</string>
+
+    <!--&lt;!&ndash; Reports - Other &ndash;&gt;-->
+    <string name="learning_button">Trial state</string>
+    <string name="not_urgent_report_button">דיווח לא דחוף</string>
+    <string name="not_for_immediate_txt">לא לטיפול מיידי</string>
+    <string name="other_services_txt">שירותים נוספים</string>
+    <string name="pniot_hazibur_button">פניות הציבור</string>
+    <string name="forms_button">טפסים</string>
+
+    <!--&lt;!&ndash; ________________________________Specific Reports - General________________________________!&ndash;&gt;-->
+
+    <string name="cancel_button">בטל</string>
+    <string name="casualties_txt">מספר נפגעים משוער</string>
+    <string name="zero_casualties_txt">0</string>
+    <string name="one_to_four_casualties_txt">1-4</string>
+    <string name="five_to_ten_casualties_txt">5-10</string>
+    <string name="more_than_ten_casualties_txt">מעל 10</string>
+    <string name="add_more_information_txt">הוסף מידע נוסף</string>
+    <string name="call_police_button">התקשר</string>
+    <string name="yes_button">כן</string>
+    <string name="no_button">לא</string>
+    <string name="attach_video_button">צרף סרטון</string>
+    <string name="attach_photo_button">צרף תמונה</string>
+    <string name="attach_media_button">צרף מדיה</string>
+
+    <!--&lt;!&ndash; ________________________________Specific Reports - Terror________________________________!&ndash;&gt;-->
+
+    <string name="report_sent_alert_txt">A report regarding a Terror attack near you has been sent</string>
+    <string name="is_terrorist_neutralize_txt">האם התוקף נוטרל?</string>
+    <string name="attack_type">פרט את סוג האירוע</string>
+    <string name="attack_type_shooting">ירי</string>
+    <string name="attack_type_stabbing">דקירה</string>
+    <string name="attack_type_bomb">פצצה</string>
+    <string name="attack_type_suicide">התאבדות</string>
+    <string name="attack_type_other">אחר</string>
+
+
+    <!--&lt;!&ndash; ________________________________Specific Reports - Traffic accident________________________________!&ndash;&gt;-->
+
+    <string name="report_sent_alert_txt_accident">A report regarding a Traffic accident near you has been sent</string>
+    <string name="injuries_text">האם יש נפגעים?</string>
+    <string name="accident_type">פרט את סוג תאונת הדרכים</string>
+    <string name="accident_type_multiple">תאונה מרובת כלי רכב</string>
+    <string name="accident_type_hit_and_run">פגע וברח</string>
+    <string name="accident_type_burn">רכב עולה באש</string>
+    <string name="accident_type_roll_over">רכב התהפך</string>
+    <string name="accident_type_other">אחר</string>
+
+    <!--&lt;!&ndash; ________________________________Specific Reports - Assault________________________________!&ndash;&gt;-->
+
+    <string name="report_sent_alert_txt_assault">A report regarding an Assault near you has been sent</string>
+    <string name="assault_text">האם יש נפגעים?</string>
+    <string name="assault_type">פרט את סוג התקיפה</string>
+    <string name="assault_type_street_brawl">כנופיות רחוב</string>
+    <string name="assault_type_sexual">הטרדה מינית</string>
+    <string name="assault_type_domestic">הטרדה בבית</string>
+    <string name="assault_type_other">אחר</string>
+    <string name="injuries_txt">מספר נפגעים משוער</string>
+    <string name="zero_injuries_txt">0</string>
+    <string name="one_to_four_injuries_txt">1\-4</string>
+    <string name="five_to_ten_injuries_txt">5\-10</string>
+    <string name="more_than_ten_injuries_txt">מעל 10</string>
+
+    <!--&lt;!&ndash; ________________________________Specific Reports - Kidnapping________________________________!&ndash;&gt;-->
+
+    <string name="report_sent_alert_txt_kidnapping">A report regarding a Kidnapping near you has been sent</string>
+    <string name="kidnapping_text">האם יש נפגעים?</string>
+    <string name="kidnapping_txt">מספר חוטפים משוער</string>
+    <string name="one_kidnapping_txt">1</string>
+    <string name="two_to_four_kidnapping_txt">2\-4</string>
+    <string name="five_to_eight_kidnapping_txt">5\-8</string>
+    <string name="more_than_eight_kidnapping_txt">מעל 8</string>
+    <string name="kidnappers_txt">מספר תוקפים משוער</string>
+    <string name="one_kidnappers_txt">1</string>
+    <string name="two_to_four_kidnappers_txt">2\-4</string>
+    <string name="fiv_to_ten_kidnappers_txt">5\-10</string>
+    <string name="more_than_ten_kidnappers_txt">מעל 10</string>
+
+    <!--&lt;!&ndash; ________________________________Specific Reports - Fire________________________________!&ndash;&gt;-->
+
+    <string name="report_sent_alert_txt_fire">A report regarding an Fire near you has been sent</string>
+    <string name="fire_text">האם יש נפגעים?</string>
+    <string name="fire_location">מיקום השריפה</string>
+    <string name="fire_type_privateresidence">בית פרטי</string>
+    <string name="fire_type_public">מקום ציבורי</string>
+    <string name="fire_type_agriculture">שטח חקלאי</string>
+    <string name="fire_type_other">אחר</string>
+
+    <!--&lt;!&ndash; ________________________________Specific Reports - Cancel notice________________________________!&ndash;&gt;-->
+
+    <string name="cancel_notice_txt">שים לב שבמקרה שתבטל מספר דיווחים תיחסם גישתך לאפליקציה</string>
+    <string name="cancel_read">קראתי ואני מאשר את התקנון</string>
+    <string name="cancel_back">חזר לעמוד הדיווחים</string>
+
+
+    <!--&lt;!&ndash; ________________________________Specific Reports - None urgent________________________________!&ndash;&gt;-->
+
+    <string name="none_urgent_type">סוג האירוע</string>
+    <string name="none_urgent_date">תאריך האירוע</string>
+    <string name="none_urgent_time">זמן התרחשות האירוע</string>
+    <string name="none_urgent_location">מקום האירוע</string>
+    <string name="none_urgent_role">מה היה חלקך באירוע?</string>
+    <string name="none_urgent_role_victim">קורבן</string>
+    <string name="none_urgent_role_eye_witness">עד ראיה</string>
+    <string name="none_urgent_other">אחר</string>
+    <string name="none_urgent_name">שם מלא:</string>
+    <string name="none_urgent_id">תעודת זהות:</string>
+    <string name="none_urgent_email">מייל:</string>
+    <string name="none_urgent_additional_contact_info">אמצעי קשר נוסף</string>
+    <string name="none_urgent_description">תאר את האירוע</string>
+    <string name="none_urgent_only_hundred">Be aware you can only use 100 words</string>
+    <string name="none_urgent_mendatory">*שדות חובה</string>
+    <string name="none_urgent_notice_txt">Please note, \n Uppon pressing "send", this form \n will be sent to the Police - who may or may not pursue the subject. \n The Police my contact you for additional info. \n Should your report be jusged as \n Spam or Harrestmant, you will not be permitted to make any further reports \n from this device. \n If yhe information given here is true and relevant, press "Send". /n If you want to revise your report, press "Cancel".</string>
+    <string name="none_urgent_read">קראתי את ההודעה</string>
+    <string name="none_urgent_cancel">בטל</string>
+
+
+
+    <!--&lt;!&ndash; ________________________________Settings________________________________!&ndash;&gt;-->
+
+    <string name="location">מיקום</string>
+
+    <string name="permanent_location">מיקום קבוע</string>
+    <string name="choose_permanent_location_summary">בחר את מיקומך הקבוע</string>
+    <string name="settings_area_current">דיווחים מבוססי מיקום</string>
+    <string name="settings_area_current_summary">קבל דיווחים מבוססי מיקום (דרוש GPS)</string>
+    <string name="interest_area">אזורי עניין</string>
+    <string name="interest_area_summary">בחר אילו איזורים מעניינים אותך לקבל עליהם עדכונים</string>
+
+    <string name="fields_of_interests">תחומי עניין</string>
+
+    <string name="settings_emergencies">אירוע חירום</string>
+    <string name="settings_alarms">התראות</string>
+    <string name="settings_missing">נעדרים</string>
+    <string name="settings_public">שירותים ציבוריים</string>
+    <string name="settings_wanted">Public Assistance Requests</string>
+    <string name="settings_news">חדשות משטרתיות</string>
+    <string name="settings_legend">לגנד</string>
+
+    <string name="settings_push_notifications">התראות</string>
+    <string name="settings_push_notifications_summary">בחר האם ברצונך לקבל התראות קופצות</string>
+
+    <string name="settings_sound">עוצמת שמע</string>
+    <string name="settings_sound_summary">בחר את עוצמת הצלצול בעת קבלת התראה</string>
+
+    <string name="settings_additional">הגדרות נוספות</string>
+    <string name="settings_area">איזורי עניין</string>
+
+    <string name="settings_accesibility">נגישות</string>
+    <string name="settings_accesibility_summary">קבל עזרה עבור מוגבלויות</string>
+
+    <string name="settings_personal">הגדרות אישיות</string>
+    <string name="settings_area_txt">בחר את הנושאים המעניינים אותך</string>
+
+    <string name="title_activity_full_story_fragment">FullStoryFragment</string>
+    <string name="title_activity_general_report_try">GeneralReportTry</string>
+    <string name="title_activity_reports_acitvity_portal">ReportsAcitvityPortal</string>
+    <string name="title_activity_settings">settingsActivity</string>
+    <string name="select_report_type">בחר את סוג האירוע:</string>
+    <string name="time_select_header">Time of occurance:</string>
+    <string name="non_urgent_roleexamples">עד ראיה, קורבן וכו</string>
+    <string name="none_urgent_description_header">תיאור האירוע</string>
+    <string name="initial_report_sent_text">דיווח ראשוני עם מיקומך נשלח למשטרה</string>
+
+</resources>

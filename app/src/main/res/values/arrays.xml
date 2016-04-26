@@ -1,0 +1,42 @@
+<resources>
+    <string-array name="regions_array">
+        <item>כל האזורים</item>
+        <item>צפון</item>
+        <item>השרון</item>
+        <item>דן</item>
+        <item>ירושלים</item>
+        <item>יהודה ושומרון</item>
+        <item>הדרום</item>
+    </string-array>
+
+    <string-array name="regions_array_values">
+        <item>all</item>
+        <item>north</item>
+        <item>hasharon</item>
+        <item>dan</item>
+        <item>jerusalem</item>
+        <item>yehuda</item>
+        <item>darom</item>
+    </string-array>
+
+    <string-array name="push_notifications">
+        <item>אפשר</item>
+        <item>רק דיווחי חירום</item>
+        <item>אל תאפשר</item>
+    </string-array>
+
+    <string-array name="push_notifications_values">
+        <item>enabled</item>
+        <item>emergency_only</item>
+        <item>disabled</item>
+    </string-array>
+
+    <string-array name="nonurgent_types">
+        <item>bicycle stealing</item>
+    </string-array>
+
+    <string-array name="nonurgent_types_values">
+        <item>bicycle stealing</item>
+    </string-array>
+
+</resources>

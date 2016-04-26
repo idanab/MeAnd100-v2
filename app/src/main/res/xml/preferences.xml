@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:key="location_category_key"
+        android:title="@string/location"
+        android:persistent="false">
+
+        <SwitchPreference
+            android:key="pref_my_current_location"
+            android:title="@string/settings_area_current"
+            android:summary="@string/settings_area_current_summary"
+            android:defaultValue="true" />
+
+        <ListPreference
+            android:key="pref_interest_area"
+            android:title="@string/interest_area"
+            android:summary="@string/interest_area_summary"
+            android:entries="@array/regions_array"
+            android:entryValues="@array/regions_array_values"/>
+
+    </PreferenceCategory>
+
+    <ListPreference
+        android:key="pref_notifications settings"
+        android:title="@string/settings_push_notifications"
+        android:summary="@string/settings_push_notifications_summary"
+        android:entries="@array/push_notifications"
+        android:entryValues="@array/push_notifications_values"/>
+
+
+    <PreferenceCategory
+        android:key="interest_fields_category_key"
+        android:title="@string/fields_of_interests"
+        android:persistent="false">
+
+        <SwitchPreference
+            android:key="pref_interestIn_emergencies"
+            android:title="@string/settings_emergencies"
+            android:defaultValue="true" />
+
+        <SwitchPreference
+            android:key="pref_interestIn_alarms"
+            android:title="@string/settings_alarms"
+            android:defaultValue="true" />
+
+        <SwitchPreference
+            android:key="pref_interestIn_missing"
+            android:title="@string/settings_missing"
+            android:defaultValue="true" />
+
+        <SwitchPreference
+            android:key="pref_interestIn_public"
+            android:title="@string/settings_public"
+            android:defaultValue="true" />
+
+        <SwitchPreference
+            android:key="pref_interestIn_policenews"
+            android:title="@string/settings_news"
+            android:defaultValue="true" />
+
+        <SwitchPreference
+            android:key="pref_interestIn_legend"
+            android:title="@string/settings_legend"
+            android:defaultValue="true" />
+
+    </PreferenceCategory>
+
+    <SeekBarPreference
+        android:key="pref_sound"
+        android:title="@string/settings_sound"
+        android:summary="@string/settings_sound_summary"/>
+
+    <PreferenceCategory
+        android:key="pref_accesiblity_category_key"
+        android:title="@string/settings_accesibility"
+        android:persistent="false">
+
+        <SwitchPreference
+            android:key="pref_accesiblity"
+            android:title="@string/settings_accesibility"
+            android:summary="@string/settings_accesibility"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
+
+
+</PreferenceScreen>

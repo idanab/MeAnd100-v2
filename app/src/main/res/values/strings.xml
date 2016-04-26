@@ -1,0 +1,192 @@
+<resources>
+    <string name="app_name">100&amp;Me</string>
+    <!--important- do not change next 'google_app_id'!!!-->
+    <string name="google_app_id">AIzaSyAb5lPf1w8REr2XUy3dJ95ujFd2NyIbZD4</string>
+    <string name="gcm_defaultSenderId">162679940561</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="hello_news_fragment">news will be here soon!</string>
+    <string name="hello_report_fragment">reports will be here soon!</string>
+    <string name="hello_settings_fragment">settings will be here soon!</string>
+    <string name="title_activity_general_report">GeneralReport</string>
+    <!--&lt;!&ndash; TABS &ndash;&gt;-->
+    <string name="settings_tab">Settings</string>
+    <string name="reports_tab">Report</string>
+    <string name="news_tab">Updates</string>
+    <string name="title_activity_more_details_report">more detail report</string>
+    <string name="send_button">Send</string>
+
+    <!--&lt;!&ndash; ________________________________Reports Menu________________________________!&ndash;&gt;-->
+
+    <string name="terrorattack_report_button">Terror Attack</string>
+    <string name="accident_report_button">Traffic Accident</string>
+    <string name="assult_report_button">Assault</string>
+    <string name="hijack_report_button">Kidnapping</string>
+    <string name="fire_report_button">Fire</string>
+    <string name="robbery_report_button">Robbery</string>
+
+    <!--&lt;!&ndash; Reports - Other &ndash;&gt;-->
+    <string name="learning_button">Trial state</string>
+    <string name="not_urgent_report_button">Nonurgent Report</string>
+    <string name="not_for_immediate_txt">Not for immediate treatment</string>
+    <string name="other_services_txt">Additional online services</string>
+    <string name="pniot_hazibur_button">Public realations</string>
+    <string name="forms_button">Forms</string>
+
+    <!--&lt;!&ndash; ________________________________Specific Reports - General________________________________!&ndash;&gt;-->
+
+    <string name="cancel_button">Cancel</string>
+    <string name="casualties_txt">Approximate casualties</string>
+    <string name="zero_casualties_txt">0</string>
+    <string name="one_to_four_casualties_txt">1-4</string>
+    <string name="five_to_ten_casualties_txt">5-10</string>
+    <string name="more_than_ten_casualties_txt">Over 10</string>
+    <string name="add_more_information_txt">Add additional information:</string>
+    <string name="call_police_button">Call 100</string>
+    <string name="yes_button">Yes</string>
+    <string name="no_button">No</string>
+    <string name="attach_video_button">Video</string>
+    <string name="attach_photo_button">Picture</string>
+    <string name="attach_media_button">Media</string>
+
+    <!--&lt;!&ndash; ________________________________Specific Reports - Terror________________________________!&ndash;&gt;-->
+
+    <string name="report_sent_alert_txt">A report regarding a Terror attack near you has been sent</string>
+    <string name="is_terrorist_neutralize_txt">Has the assailant been neutralized?</string>
+    <string name="attack_type">State the type of Terror attack in question</string>
+    <string name="attack_type_shooting">Shooting</string>
+    <string name="attack_type_stabbing">Stabbing</string>
+    <string name="attack_type_bomb">Bomb</string>
+    <string name="attack_type_suicide">Suicide</string>
+    <string name="attack_type_other">Other</string>
+
+
+    <!--&lt;!&ndash; ________________________________Specific Reports - Traffic accident________________________________!&ndash;&gt;-->
+
+    <string name="report_sent_alert_txt_accident">A report regarding a Traffic accident near you has been sent</string>
+    <string name="injuries_text">Has anyone been injured?</string>
+    <string name="accident_type">State the type of Traffic accident in question</string>
+    <string name="accident_type_multiple">Multiple vehicle collision</string>
+    <string name="accident_type_hit_and_run">Hit and run</string>
+    <string name="accident_type_burn">Burning vehicle</string>
+    <string name="accident_type_roll_over">Vehicle rolled over</string>
+    <string name="accident_type_other">Other</string>
+
+    <!--&lt;!&ndash; ________________________________Specific Reports - Assault________________________________!&ndash;&gt;-->
+
+    <string name="report_sent_alert_txt_assault">A report regarding an Assault near you has been sent</string>
+    <string name="assault_text">Has anyone been injured?</string>
+    <string name="assault_type">State the type of Assault:</string>
+    <string name="assault_type_street_brawl">Street brawl</string>
+    <string name="assault_type_sexual">Sexual assault</string>
+    <string name="assault_type_domestic">Domestic abuse</string>
+    <string name="assault_type_other">Other</string>
+    <string name="injuries_txt">Approximate number of injuries</string>
+    <string name="zero_injuries_txt">0</string>
+    <string name="one_to_four_injuries_txt">1-4</string>
+    <string name="five_to_ten_injuries_txt">5-10</string>
+    <string name="more_than_ten_injuries_txt">Over 10</string>
+
+    <!--&lt;!&ndash; ________________________________Specific Reports - Kidnapping________________________________!&ndash;&gt;-->
+
+    <string name="report_sent_alert_txt_kidnapping">A report regarding a Kidnapping near you has been sent</string>
+    <string name="kidnapping_text">Has anyone been injured?</string>
+    <string name="kidnapping_txt">Approximate number of people Kidnapped</string>
+    <string name="one_kidnapping_txt">1</string>
+    <string name="two_to_four_kidnapping_txt">2-4</string>
+    <string name="five_to_eight_kidnapping_txt">5-8</string>
+    <string name="more_than_eight_kidnapping_txt">Over 8</string>
+    <string name="kidnappers_txt">Approximate number of Assailants</string>
+    <string name="one_kidnappers_txt">1</string>
+    <string name="two_to_four_kidnappers_txt">2-4</string>
+    <string name="fiv_to_ten_kidnappers_txt">5-10</string>
+    <string name="more_than_ten_kidnappers_txt">Over 10</string>
+
+    <!--&lt;!&ndash; ________________________________Specific Reports - Fire________________________________!&ndash;&gt;-->
+
+    <string name="report_sent_alert_txt_fire">A report regarding an Fire near you has been sent</string>
+    <string name="fire_text">Has anyone been injured?</string>
+    <string name="fire_location">State the location of Fire</string>
+    <string name="fire_type_privateresidence">Private residence</string>
+    <string name="fire_type_public">Public place\Working place</string>
+    <string name="fire_type_agriculture">Agricultural area</string>
+    <string name="fire_type_other">Other</string>
+
+  <!--&lt;!&ndash; ________________________________Specific Reports - Cancel notice________________________________!&ndash;&gt;-->
+
+    <string name="cancel_notice_txt">Please notice, \n Should there be multiple false reports, \n or your phone is considered to have made repeated harrestmants. \n you will not be permitted to make any further reports \n from this device. \n In such a case, you may be subject to further \n inquery by the Police. \n For your information, this app has a \n Trial state.</string>
+    <string name="cancel_read">I have read this notice</string>
+    <string name="cancel_back">Back to the Reports menu</string>
+
+
+    <!--&lt;!&ndash; ________________________________Specific Reports - None urgent________________________________!&ndash;&gt;-->
+
+    <string name="none_urgent_type">State the nature of the report</string>
+    <string name="none_urgent_date">Date of incident</string>
+    <string name="none_urgent_time">Time of incident</string>
+    <string name="none_urgent_location">Where did the incident take place?</string>
+    <string name="none_urgent_role">What was your role in the incident?</string>
+    <string name="none_urgent_role_victim">Victim</string>
+    <string name="none_urgent_role_eye_witness">Eye witness</string>
+    <string name="none_urgent_other">Other</string>
+    <string name="none_urgent_name">Name:</string>
+    <string name="none_urgent_id">ID:</string>
+    <string name="none_urgent_email">Email:</string>
+    <string name="none_urgent_additional_contact_info">Additional Contact Information</string>
+    <string name="none_urgent_description">Describe the incident</string>
+    <string name="none_urgent_only_hundred">Be aware you can only use 100 words</string>
+    <string name="none_urgent_mendatory">*Mendatory fields</string>
+    <string name="none_urgent_notice_txt">Please note, \n Uppon pressing "send", this form \n will be sent to the Police - who may or may not pursue the subject. \n The Police my contact you for additional info. \n Should your report be jusged as \n Spam or Harrestmant, you will not be permitted to make any further reports \n from this device. \n If yhe information given here is true and relevant, press "Send". /n If you want to revise your report, press "Cancel".</string>
+    <string name="none_urgent_read">I have read this notice</string>
+    <string name="none_urgent_cancel">Cancel</string>
+
+
+
+    <!--&lt;!&ndash; ________________________________Settings________________________________!&ndash;&gt;-->
+
+    <string name="location">Location</string>
+
+    <string name="permanent_location">Permanent location</string>
+    <string name="choose_permanent_location_summary">choose your permanent location from the list</string>
+    <string name="settings_area_current">Location Based Reports</string>
+    <string name="settings_area_current_summary">Get location based reports (GPS required)</string>
+    <string name="interest_area">Interest area</string>
+    <string name="interest_area_summary">choose which areas are interesting for you to see updates</string>
+
+    <string name="fields_of_interests">fields of interests</string>
+
+    <string name="settings_emergencies">Emergencies</string>
+    <string name="settings_alarms">Alarms</string>
+    <string name="settings_missing">Missing persons</string>
+    <string name="settings_public">Public Service</string>
+    <string name="settings_wanted">Public Assistance Requests</string>
+    <string name="settings_news">Police News</string>
+    <string name="settings_legend">Legend</string>
+
+    <string name="settings_push_notifications">Notifications</string>
+    <string name="settings_push_notifications_summary">Decide whether you are interested in getting push notifications to your device</string>
+
+    <string name="settings_sound">Sound level</string>
+    <string name="settings_sound_summary">Set notifications sound level</string>
+
+    <string name="settings_additional">Additional settings</string>
+    <string name="settings_area">Areas of interest</string>
+
+    <string name="settings_accesibility">Accesibility</string>
+    <string name="settings_accesibility_summary">Get help for accesibility problems</string>
+
+    <string name="settings_personal">Personal preferences</string>
+    <string name="settings_area_txt">Choose your areas of interest</string>
+
+    <string name="title_activity_full_story_fragment">FullStoryFragment</string>
+    <string name="title_activity_general_report_try">GeneralReportTry</string>
+    <string name="title_activity_reports_acitvity_portal">ReportsAcitvityPortal</string>
+    <string name="title_activity_settings">settingsActivity</string>
+    <string name="select_report_type">select the type of the report:</string>
+    <string name="time_select_header">Time of occurance:</string>
+    <string name="non_urgent_roleexamples">Victim, Eye witeness etc</string>
+    <string name="none_urgent_description_header">Description of the occurance:</string>
+
+</resources>
