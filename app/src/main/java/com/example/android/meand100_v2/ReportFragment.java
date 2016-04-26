@@ -26,7 +26,7 @@ public class ReportFragment extends Fragment {
 
     private final String PNIOT_HAZIBUR_URL = "http://www.police.gov.il/portal.aspx?mid=39";
     private final String FORMS_URL = "http://www.police.gov.il/tfasim.aspx";
-
+    //.
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         ViewGroup root = (ViewGroup) inflater.inflate(R.layout.activity_reports_acitvity_portal, null);
