@@ -8,117 +8,138 @@
     android:background="?attr/color"
     android:gravity="top|right">
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/linearLayout">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Approximate number of casualties"
-            android:id="@+id/num_of_casualties_text"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
-
-        <RadioGroup
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/more_first_radio_group"
-            android:orientation="horizontal">
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0"
-                android:id="@+id/zero_radio"
-                android:padding="5dp" />
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="1-4"
-                android:id="@+id/onetofour_radio"
-                android:checked="false"
-                android:padding="5dp" />
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="5-10"
-                android:id="@+id/fivetoten_radio"
-                android:checked="false"
-                android:padding="5dp" />
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="10+"
-                android:id="@+id/morethanten_radio"
-                android:checked="false"
-                android:padding="5dp" />
-        </RadioGroup>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/add_more_information_txt"
-            android:id="@+id/more_information_text" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:id="@+id/more_info_edittext"
-            android:shadowColor="#bd2d595b"
-            android:background="#ffa9a790"
-            android:gravity="top|left"
-            android:inputType="text" />
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/scrollView4" >
 
         <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/linearLayout">
 
-            <Button
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Add Media"
-                android:id="@+id/attack_media_button" />
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/casualties_txt"
+                android:id="@+id/num_of_casualties_text"
+                android:layout_gravity="right" />
 
-            <Button
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/more_first_radio_group"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:drawableRight="@android:drawable/btn_radio"
+                    android:gravity="right"
+                    android:text="0"
+                    android:id="@+id/zero_radio"
+                    android:padding="5dp" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:drawableRight="@android:drawable/btn_radio"
+                    android:gravity="right"
+                    android:text="1-4"
+                    android:id="@+id/onetofour_radio"
+                    android:checked="false"
+                    android:padding="5dp" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:drawableRight="@android:drawable/btn_radio"
+                    android:gravity="right"
+                    android:text="5-10"
+                    android:id="@+id/fivetoten_radio"
+                    android:checked="false"
+                    android:padding="5dp" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:drawableRight="@android:drawable/btn_radio"
+                    android:text="10+"
+                    android:id="@+id/morethanten_radio"
+                    android:checked="false"
+                    android:padding="5dp" />
+            </RadioGroup>
+
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Add Photo"
-                android:id="@+id/add_photo_button" />
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/add_more_information_txt"
+                android:layout_gravity="right"
+                android:id="@+id/more_information_text" />
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Add Video"
-                android:id="@+id/add_video_button" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:id="@+id/more_info_edittext"
+                android:shadowColor="#bd2d595b"
+                android:background="#ffa9a790"
+                android:gravity="top|left"
+                android:inputType="text" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Photo"
+                    android:gravity="right"
+                    android:id="@+id/add_photo_button" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Video"
+                    android:gravity="left"
+                    android:id="@+id/add_video_button" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/PoliceButtons"
+                    android:id="@+id/send_button2"
+                    android:layout_gravity="right"
+                    android:background="@drawable/buttonshape"
+                    android:text="@string/send_button" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/call_police_button"
+                    android:id="@+id/call_100_button"
+                    android:layout_gravity="left"
+                    android:background="#ffff070c" />
+            </LinearLayout>
 
         </LinearLayout>
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:theme="@style/PoliceButtons"
-            android:id="@+id/send_button2"
-            android:background="@drawable/buttonshape"
-            android:text="send" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="call 100"
-            android:id="@+id/call_100_button"
-            android:layout_gravity="right"
-            android:background="#ffff070c" />
-
-    </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>

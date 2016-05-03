@@ -8,7 +8,7 @@
         <item name="colorPrimaryDark">#283593</item>
         <!--   theme UI controls like checkboxes and text fields -->
         <item name="colorAccent">#ffffff</item>
-        <item name="color">#0000FF</item>
+        <item name="color">#bbbbd4</item>
     </style>
 
     <style name="PoliceButtons">

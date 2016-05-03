@@ -29,7 +29,7 @@
 
     <!--&lt;!&ndash; Reports - Other &ndash;&gt;-->
     <string name="learning_button">Trial state</string>
-    <string name="not_urgent_report_button">דיווח לא דחוף</string>
+    <string name="not_urgent_report_button"><b>דיווח לא דחוף</b></string>
     <string name="not_for_immediate_txt">לא לטיפול מיידי</string>
     <string name="other_services_txt">שירותים נוספים</string>
     <string name="pniot_hazibur_button">פניות הציבור</string>
@@ -37,7 +37,7 @@
 
     <!--&lt;!&ndash; ________________________________Specific Reports - General________________________________!&ndash;&gt;-->
 
-    <string name="cancel_button">בטל</string>
+    <string name="cancel_button">בטל דיווח</string>
     <string name="casualties_txt">מספר נפגעים משוער</string>
     <string name="zero_casualties_txt">0</string>
     <string name="one_to_four_casualties_txt">1-4</string>
@@ -53,7 +53,7 @@
 
     <!--&lt;!&ndash; ________________________________Specific Reports - Terror________________________________!&ndash;&gt;-->
 
-    <string name="report_sent_alert_txt">A report regarding a Terror attack near you has been sent</string>
+    <string name="report_sent_alert_txt">דיווח אודות האירוע נשלח למשטרה</string>
     <string name="is_terrorist_neutralize_txt">האם התוקף נוטרל?</string>
     <string name="attack_type">פרט את סוג האירוע</string>
     <string name="attack_type_shooting">ירי</string>
@@ -65,7 +65,7 @@
 
     <!--&lt;!&ndash; ________________________________Specific Reports - Traffic accident________________________________!&ndash;&gt;-->
 
-    <string name="report_sent_alert_txt_accident">A report regarding a Traffic accident near you has been sent</string>
+    <string name="report_sent_alert_txt_accident">דיווח אודות האירוע נשלח למשטרה</string>
     <string name="injuries_text">האם יש נפגעים?</string>
     <string name="accident_type">פרט את סוג תאונת הדרכים</string>
     <string name="accident_type_multiple">תאונה מרובת כלי רכב</string>
@@ -76,7 +76,7 @@
 
     <!--&lt;!&ndash; ________________________________Specific Reports - Assault________________________________!&ndash;&gt;-->
 
-    <string name="report_sent_alert_txt_assault">A report regarding an Assault near you has been sent</string>
+    <string name="report_sent_alert_txt_assault">דיווח אודות האירוע נשלח למשטרה</string>
     <string name="assault_text">האם יש נפגעים?</string>
     <string name="assault_type">פרט את סוג התקיפה</string>
     <string name="assault_type_street_brawl">כנופיות רחוב</string>
@@ -91,7 +91,7 @@
 
     <!--&lt;!&ndash; ________________________________Specific Reports - Kidnapping________________________________!&ndash;&gt;-->
 
-    <string name="report_sent_alert_txt_kidnapping">A report regarding a Kidnapping near you has been sent</string>
+    <string name="report_sent_alert_txt_kidnapping">דיווח אודות האירוע נשלח למשטרה</string>
     <string name="kidnapping_text">האם יש נפגעים?</string>
     <string name="kidnapping_txt">מספר חוטפים משוער</string>
     <string name="one_kidnapping_txt">1</string>
@@ -106,7 +106,7 @@
 
     <!--&lt;!&ndash; ________________________________Specific Reports - Fire________________________________!&ndash;&gt;-->
 
-    <string name="report_sent_alert_txt_fire">A report regarding an Fire near you has been sent</string>
+    <string name="report_sent_alert_txt_fire">דיווח אודות האירוע נשלח למשטרה</string>
     <string name="fire_text">האם יש נפגעים?</string>
     <string name="fire_location">מיקום השריפה</string>
     <string name="fire_type_privateresidence">בית פרטי</string>

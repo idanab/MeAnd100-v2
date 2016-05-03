@@ -29,7 +29,7 @@
 
     <!--&lt;!&ndash; Reports - Other &ndash;&gt;-->
     <string name="learning_button">Trial state</string>
-    <string name="not_urgent_report_button">Nonurgent Report</string>
+    <string name="not_urgent_report_button"><b>Nonurgent Report</b></string>
     <string name="not_for_immediate_txt">Not for immediate treatment</string>
     <string name="other_services_txt">Additional online services</string>
     <string name="pniot_hazibur_button">Public realations</string>
@@ -37,7 +37,7 @@
 
     <!--&lt;!&ndash; ________________________________Specific Reports - General________________________________!&ndash;&gt;-->
 
-    <string name="cancel_button">Cancel</string>
+    <string name="cancel_button">בטל דיווח</string>
     <string name="casualties_txt">Approximate casualties</string>
     <string name="zero_casualties_txt">0</string>
     <string name="one_to_four_casualties_txt">1-4</string>
