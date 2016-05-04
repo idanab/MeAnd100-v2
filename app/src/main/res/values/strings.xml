@@ -188,5 +188,8 @@
     <string name="time_select_header">Time of occurance:</string>
     <string name="non_urgent_roleexamples">Victim, Eye witeness etc</string>
     <string name="none_urgent_description_header">Description of the occurance:</string>
+    <string name="permission_rationale_location" >Please provide location</string>
+    <string name="permission_required_toast">Permission to access GPS location is provided</string>
+    <string name="location_permission_denied">Permission for location was denaied</string>
 
 </resources>

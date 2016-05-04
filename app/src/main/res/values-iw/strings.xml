@@ -189,5 +189,8 @@
     <string name="non_urgent_roleexamples">עד ראיה, קורבן וכו</string>
     <string name="none_urgent_description_header">תיאור האירוע</string>
     <string name="initial_report_sent_text">דיווח ראשוני עם מיקומך נשלח למשטרה</string>
+    <string name="permission_rationale_location">אנא אפשר מיקום ע"מ לשלוח דיווח המלווה במיקום למשטרה</string>
+    <string name="permission_required_toast">Permission to access GPS location is provided</string>
+    <string name="location_permission_denied">Permission for location was denaied</string>
 
 </resources>

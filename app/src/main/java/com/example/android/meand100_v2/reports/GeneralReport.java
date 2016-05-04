@@ -6,10 +6,15 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.location.Location;
 import android.location.LocationManager;
+import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.content.pm.PackageManager;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -19,20 +24,39 @@ import android.widget.TextView;
 
 import com.example.android.meand100_v2.GeneralStatics;
 import com.example.android.meand100_v2.MainActivity;
+import com.example.android.meand100_v2.Manifest;
 import com.example.android.meand100_v2.MoreDetailsReport;
 import com.example.android.meand100_v2.R;
 import com.example.android.meand100_v2.reports.types.Call;
+import com.example.android.meand100_v2.reports.types.PermissionUtils;
+import com.google.android.gms.appindexing.Action;
+import com.google.android.gms.appindexing.AppIndex;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.GoogleMap.OnMyLocationButtonClickListener;
+import com.google.android.gms.maps.OnMapReadyCallback;
+
 
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class GeneralReport extends AppCompatActivity {
-    //TcpClient client;
+public class GeneralReport extends AppCompatActivity
+        implements
+        ActivityCompat.OnRequestPermissionsResultCallback {
     private Bundle extras;
     LocationManager mLocationManager;
     String selection1, selection2;
     Location location;
+
+    private static final int LOCATION_PERMISSION_REQUEST_CODE = 1;
+    private boolean mPermissionDenied = false;
+    private GoogleMap mMap;
+    /**
+     * ATTENTION: This was auto-generated to implement the App Indexing API.
+     * See https://g.co/AppIndexing/AndroidStudio for more information.
+     */
+    private GoogleApiClient client;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,62 +71,76 @@ public class GeneralReport extends AppCompatActivity {
         defineEmergancyDialerListener();
         setSendButtonAction();
         setCancelationDialog();
+        enableMyLocation();
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
+        client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
-
 
     @Override
     protected void onStart() {
-        location = getLastKnownLocationTry();
         double lat = 0;
         double lon = 0;
-        try{
+        try {
             lat = location.getLatitude();
             lon = location.getLongitude();
-        }
-        catch (NullPointerException e) {
+        } catch (NullPointerException e) {
             e.printStackTrace();
         }
         //double lat=32.085300;
         //double lon=34.781768;
         GeneralStatics.sendLocation(getApplicationContext(), "lat: " + lat + " lon: " + lon);
         super.onStart();
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
+        client.connect();
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
+        Action viewAction = Action.newAction(
+                Action.TYPE_VIEW, // TODO: choose an action type.
+                "GeneralReport Page", // TODO: Define a title for the content shown.
+                // TODO: If you have web page content that matches this app activity's content,
+                // make sure this auto-generated web page URL is correct.
+                // Otherwise, set the URL to null.
+                Uri.parse("http://host/path"),
+                // TODO: Make sure this auto-generated app URL is correct.
+                Uri.parse("android-app://com.example.android.meand100_v2.reports/http/host/path")
+        );
+        AppIndex.AppIndexApi.start(client, viewAction);
     }
 
-    private Location getLastKnownLocation() {
-        mLocationManager = (LocationManager)getApplicationContext().getSystemService(LOCATION_SERVICE);
-        List<String> providers = mLocationManager.getProviders(true);
-        Location bestLocation = null;
-        for (String provider : providers) {
-            Location l = mLocationManager.getLastKnownLocation(provider);
-            if (l == null) {
-                continue;
-            }
-            if (bestLocation == null || l.getAccuracy() < bestLocation.getAccuracy()) {
-                // Found best last known location: %s", l);
-                bestLocation = l;
-            }
+    /**
+     * Enables the My Location layer if the fine location permission has been granted.
+     */
+    private void enableMyLocation() {
+        if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED) {
+            // Permission to access the location is missing.
+            PermissionUtils.requestPermission(this, LOCATION_PERMISSION_REQUEST_CODE,
+                    android.Manifest.permission.ACCESS_FINE_LOCATION, true);
+        } else if (mMap != null) {
+            // Access to the location has been granted to the app.
+            mMap.setMyLocationEnabled(true);
         }
-        return bestLocation;
     }
 
-    private Location getLastKnownLocationTry() {
-        mLocationManager = (LocationManager)getApplicationContext().getSystemService(LOCATION_SERVICE);
-        boolean gps_enabled=false;
-        try {
-            gps_enabled = mLocationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
-            if(!gps_enabled) {
-                Intent gpsOptionsIntent = new Intent(
-                        android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS);
-                startActivity(gpsOptionsIntent);
-            }
-        } catch(Exception ex) {}
-        List<String> providers = mLocationManager.getProviders(true);
-        Location l =null;
-        while (l == null) {
-            l = mLocationManager.getLastKnownLocation(providers.get(0));
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
+                                           @NonNull int[] grantResults) {
+        if (requestCode != LOCATION_PERMISSION_REQUEST_CODE) {
+            return;
         }
-        return l;
+
+        if (PermissionUtils.isPermissionGranted(permissions, grantResults,
+                android.Manifest.permission.ACCESS_FINE_LOCATION)) {
+            // Enable the my location layer if the permission has been granted.
+            enableMyLocation();
+        } else {
+            // Display the missing permission error dialog when the fragments resume.
+            mPermissionDenied = true;
+        }
     }
+
 
     private void setSendButtonAction() {
         Button sendButton = (Button) findViewById(R.id.send_button);
@@ -120,17 +158,16 @@ public class GeneralReport extends AppCompatActivity {
     }
 
     private boolean isAllFormFilled() {
-        try{
+        try {
             RadioGroup group1 = (RadioGroup) findViewById(R.id.first_radio_group);
-            String radiovalue1 = ((RadioButton)findViewById(group1.getCheckedRadioButtonId())).getText().toString(); //TODO:not good statement
+            String radiovalue1 = ((RadioButton) findViewById(group1.getCheckedRadioButtonId())).getText().toString(); //TODO:not good statement
             RadioGroup group2 = (RadioGroup) findViewById(R.id.second_radio_group);
-            String radiovalue2 = ((RadioButton)findViewById(group2.getCheckedRadioButtonId())).getText().toString();
-            if((group1.getCheckedRadioButtonId()>-1)&&(group2.getCheckedRadioButtonId()>-1)) {
+            String radiovalue2 = ((RadioButton) findViewById(group2.getCheckedRadioButtonId())).getText().toString();
+            if ((group1.getCheckedRadioButtonId() > -1) && (group2.getCheckedRadioButtonId() > -1)) {
                 return true;
             }
             return false;
-        }
-        catch (NullPointerException e) { //happens if one or more questions have not been answered
+        } catch (NullPointerException e) { //happens if one or more questions have not been answered
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setMessage("Please fill out all details and than hit 'send'")
                     .setPositiveButton("OK", new DialogInterface.OnClickListener() {
@@ -159,18 +196,18 @@ public class GeneralReport extends AppCompatActivity {
 
     /**
      * putting the exact buttons that concerning the specific reports
+     *
      * @param radioGroup a group to populate
-     * @param array values to populate to
+     * @param array      values to populate to
      */
     private void setRadioButtonsFromArrayToRadioGroup(RadioGroup radioGroup, ArrayList<String> array) {
         radioGroup.setOrientation(LinearLayout.VERTICAL);
-        for(int i=0; i<radioGroup.getChildCount(); i++) {
+        for (int i = 0; i < radioGroup.getChildCount(); i++) {
             RadioButton radioButton = (RadioButton) radioGroup.getChildAt(i);
-            if(i<array.size()) {
+            if (i < array.size()) {
                 radioButton.setText(array.get(i));
                 radioButton.setVisibility(View.VISIBLE);
-            }
-            else
+            } else
                 radioButton.setVisibility(View.INVISIBLE);
         }
     }
@@ -186,7 +223,6 @@ public class GeneralReport extends AppCompatActivity {
                 AlertDialog alertDialog = new AlertDialog.Builder(GeneralReport.this).create(); //Read Update
                 alertDialog.setTitle("Cancellation");
                 alertDialog.setMessage("dont do that again!");
-
 
 
                 alertDialog.setButton(DialogInterface.BUTTON_POSITIVE, "OK", new DialogInterface.OnClickListener() {
@@ -236,5 +272,25 @@ public class GeneralReport extends AppCompatActivity {
                 startActivity(callIntent);
             }
         });
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
+        Action viewAction = Action.newAction(
+                Action.TYPE_VIEW, // TODO: choose an action type.
+                "GeneralReport Page", // TODO: Define a title for the content shown.
+                // TODO: If you have web page content that matches this app activity's content,
+                // make sure this auto-generated web page URL is correct.
+                // Otherwise, set the URL to null.
+                Uri.parse("http://host/path"),
+                // TODO: Make sure this auto-generated app URL is correct.
+                Uri.parse("android-app://com.example.android.meand100_v2.reports/http/host/path")
+        );
+        AppIndex.AppIndexApi.end(client, viewAction);
+        client.disconnect();
     }
 }
