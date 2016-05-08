@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.location.Location;
+import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -23,11 +24,12 @@ import com.example.android.meand100_v2.MoreDetailsReport;
 import com.example.android.meand100_v2.R;
 import com.example.android.meand100_v2.reports.types.Call;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class GeneralReport extends AppCompatActivity {
+public class GeneralReport extends AppCompatActivity  {
     //TcpClient client;
     private Bundle extras;
     LocationManager mLocationManager;
@@ -40,9 +42,6 @@ public class GeneralReport extends AppCompatActivity {
         setContentView(R.layout.activity_general_report);
         //TODO: send to the police at this point
         extras = getIntent().getExtras();
-        //client = new TcpClient();
-        //client.connect(getApplicationContext(), "127.0.0.1", 1500);
-        //client.send(" INITIALREPORT " + extras.getString("reportType"));
         addQuestions();
         defineEmergancyDialerListener();
         setSendButtonAction();
@@ -52,7 +51,7 @@ public class GeneralReport extends AppCompatActivity {
 
     @Override
     protected void onStart() {
-        location = getLastKnownLocationTry();
+        location = getLastKnownLocation();
         double lat = 0;
         double lon = 0;
         try{
@@ -69,23 +68,6 @@ public class GeneralReport extends AppCompatActivity {
     }
 
     private Location getLastKnownLocation() {
-        mLocationManager = (LocationManager)getApplicationContext().getSystemService(LOCATION_SERVICE);
-        List<String> providers = mLocationManager.getProviders(true);
-        Location bestLocation = null;
-        for (String provider : providers) {
-            Location l = mLocationManager.getLastKnownLocation(provider);
-            if (l == null) {
-                continue;
-            }
-            if (bestLocation == null || l.getAccuracy() < bestLocation.getAccuracy()) {
-                // Found best last known location: %s", l);
-                bestLocation = l;
-            }
-        }
-        return bestLocation;
-    }
-
-    private Location getLastKnownLocationTry() {
         mLocationManager = (LocationManager)getApplicationContext().getSystemService(LOCATION_SERVICE);
         boolean gps_enabled=false;
         try {

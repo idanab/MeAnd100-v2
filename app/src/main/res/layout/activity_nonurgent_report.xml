@@ -1,6 +1,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="fill_parent"
+    android:layout_height="wrap_content" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
@@ -8,44 +8,70 @@
     android:nestedScrollingEnabled="true">
 
     <ScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
         android:id="@+id/scrollView2" >
 
         <LinearLayout
             android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true">
 
             <TextView
+                android:gravity="right"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="@string/none_urgent_type"
                 android:id="@+id/select_report_type"
-                android:layout_margin="5dp" />
+                android:layout_margin="5dp"
+                android:layout_gravity="right" />
+
+            <ImageView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:src="@android:drawable/divider_horizontal_bright"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="2dp"
+                android:paddingTop="2dp" />
 
             <Spinner
                 android:id="@+id/select_report_type_spinner"
-                android:layout_width="250dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:prompt="@string/select_report_type" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="right"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="@string/none_urgent_time"
                 android:id="@+id/time_select_button"
                 android:layout_margin="5dp" />
 
 
+            <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:src="@android:drawable/divider_horizontal_bright"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="2dp"
+                android:paddingTop="2dp"
+                android:id="@+id/imageView" />
+
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
 
                 <Button
                     android:layout_width="wrap_content"
@@ -69,7 +95,20 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="@string/none_urgent_location"
                 android:id="@+id/location_header"
-                android:layout_margin="5dp" />
+                android:gravity="right"
+                android:layout_margin="5dp"
+                android:layout_gravity="right" />
+
+            <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:src="@android:drawable/divider_horizontal_bright"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="2dp"
+                android:paddingTop="2dp"
+                android:id="@+id/imageView2" />
 
             <fragment
                 android:id="@+id/place_autocomplete_fragment"
@@ -81,17 +120,31 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="right"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:id="@+id/role_header"
                 android:text="@string/none_urgent_role"
-                android:layout_margin="5dp" />
+                android:layout_margin="5dp"
+                android:layout_gravity="right" />
+
+            <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:src="@android:drawable/divider_horizontal_bright"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="2dp"
+                android:paddingTop="2dp"
+                android:id="@+id/imageView3" />
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/role_edittext"
                 android:minLines="1"
-                android:hint="@string/non_urgent_roleexamples" />
+                android:hint="@string/non_urgent_roleexamples"
+                android:layout_marginBottom="6dp" />
 
             <LinearLayout
                 android:orientation="horizontal"
@@ -164,26 +217,24 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:id="@+id/description_header"
+                android:gravity="right"
                 android:text="@string/none_urgent_description_header"
-                android:layout_margin="5dp" />
+                android:layout_margin="5dp"
+                android:layout_gravity="right" />
 
             <EditText
-                android:layout_width="match_parent"
-                android:layout_height="90dp"
-                android:id="@+id/descrition_edittext"
-                android:shadowColor="#bd2d595b"
-                android:background="#ffa9a790"
-                android:gravity="top|left"
-                android:inputType="text"
-                android:maxLength="100" />
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText2" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:theme="@style/PoliceButtons"
                 android:background="@drawable/buttonshape"
-                android:text="send"
-                android:id="@+id/send_button" />
+                android:text="@string/send_button"
+                android:id="@+id/send_button"
+                android:layout_gravity="center_horizontal" />
 
         </LinearLayout>
     </ScrollView>

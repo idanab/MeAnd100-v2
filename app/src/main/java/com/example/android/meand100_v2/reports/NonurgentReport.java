@@ -1,6 +1,7 @@
 package com.example.android.meand100_v2.reports;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
@@ -12,6 +13,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 
+import com.example.android.meand100_v2.GeneralStatics;
+import com.example.android.meand100_v2.MainActivity;
 import com.example.android.meand100_v2.R;
 import com.google.android.gms.common.api.Status;
 import com.google.android.gms.location.places.Place;
@@ -80,7 +83,9 @@ public class NonurgentReport extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (isAllFormFilled()) {
-
+                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);//go back to main page
+                    startActivity(intent);
+                    GeneralStatics.makeToast(getApplicationContext(), "דיווח נשלח");
                 }
             }
         });
