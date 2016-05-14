@@ -166,8 +166,8 @@ public class GeneralReport extends AppCompatActivity  {
             @Override
             public void onClick(View v) {
                 AlertDialog alertDialog = new AlertDialog.Builder(GeneralReport.this).create(); //Read Update
-                alertDialog.setTitle("Cancellation");
-                alertDialog.setMessage("dont do that again!");
+                alertDialog.setTitle("ביטול דיווח");
+                alertDialog.setMessage("שים לב, מספר ביטולי דיווח עלולים להוביל לחסימתך");
 
 
 

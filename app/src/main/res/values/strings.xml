@@ -37,7 +37,7 @@
 
     <!--&lt;!&ndash; ________________________________Specific Reports - General________________________________!&ndash;&gt;-->
 
-    <string name="cancel_button">בטל דיווח</string>
+    <string name="cancel_button">Cancel report</string>
     <string name="casualties_txt">Approximate casualties</string>
     <string name="zero_casualties_txt">0</string>
     <string name="one_to_four_casualties_txt">1-4</string>
@@ -188,5 +188,6 @@
     <string name="time_select_header">Time of occurance:</string>
     <string name="non_urgent_roleexamples">Victim, Eye witeness etc</string>
     <string name="none_urgent_description_header">Description of the occurance:</string>
+    <string name="initial_report_sent_text">A report with your location has been sent to the police</string>
 
 </resources>

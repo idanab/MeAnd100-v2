@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.provider.Settings;
+import android.util.Log;
 import android.widget.Toast;
 import android.provider.Settings.Secure;
 
@@ -42,8 +43,8 @@ public class GeneralStatics {
     }
 
     public static void makeToast(Context context, String text) {
-        Toast.makeText(context, text,
-                Toast.LENGTH_SHORT).show();
+        //Toast.makeText(context, text, Toast.LENGTH_SHORT).show();
+        Log.e("Toast:", text);
     }
 
     public static void sendLocation(Context context, String location) {
