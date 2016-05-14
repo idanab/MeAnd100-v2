@@ -8,6 +8,7 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -210,7 +211,7 @@ public class GeneralReport extends AppCompatActivity  {
     }
 
     private void defineEmergancyDialerListener() {
-        Button btn = (Button) findViewById(R.id.call_100_button);
+        FloatingActionButton btn = (FloatingActionButton) findViewById(R.id.call_100_button);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
