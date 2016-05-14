@@ -1,5 +1,5 @@
 <resources>
-    <string-array name="regions_array">
+    <string-array name="regions_array" translatable="false">
         <item>כל האזורים</item>
         <item>צפון</item>
         <item>השרון</item>
@@ -9,7 +9,7 @@
         <item>הדרום</item>
     </string-array>
 
-    <string-array name="regions_array_values">
+    <string-array name="regions_array_values" translatable="false">
         <item>all</item>
         <item>north</item>
         <item>hasharon</item>
@@ -19,7 +19,7 @@
         <item>darom</item>
     </string-array>
 
-    <string-array name="casualties_array">
+    <string-array name="casualties_array" translatable="false">
         <item>0</item>
         <item>1-3</item>
         <item>4-7</item>
@@ -27,7 +27,7 @@
         <item>10+</item>
     </string-array>
 
-    <string-array name="casualties_values">
+    <string-array name="casualties_values" translatable="false">
         <item>0</item>
         <item>1-3</item>
         <item>4-7</item>
@@ -35,23 +35,23 @@
         <item>10+</item>
     </string-array>
 
-    <string-array name="push_notifications">
+    <string-array name="push_notifications" translatable="false">
         <item>אפשר</item>
         <item>רק דיווחי חירום</item>
         <item>אל תאפשר</item>
     </string-array>
 
-    <string-array name="push_notifications_values">
+    <string-array name="push_notifications_values" translatable="false">
         <item>enabled</item>
         <item>emergency_only</item>
         <item>disabled</item>
     </string-array>
 
-    <string-array name="nonurgent_types">
+    <string-array name="nonurgent_types" translatable="false">
         <item>bicycle stealing</item>
     </string-array>
 
-    <string-array name="nonurgent_types_values">
+    <string-array name="nonurgent_types_values" translatable="false">
         <item>bicycle stealing</item>
     </string-array>
 

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">אני ו\-100</string>
+    <string name="app_name">Me And 100</string>
     <!--important- do not change next 'google_app_id'!!!-->
     <string name="google_app_id">AIzaSyAb5lPf1w8REr2XUy3dJ95ujFd2NyIbZD4</string>
     <string name="gcm_defaultSenderId">162679940561</string>
@@ -187,7 +187,7 @@
     <string name="select_report_type">בחר את סוג האירוע:</string>
     <string name="time_select_header">Time of occurance:</string>
     <string name="non_urgent_roleexamples">עד ראיה, קורבן וכו</string>
-    <string name="none_urgent_description_header">תיאור האירוע</string>
+    <string name="none_urgent_description_header">תיאור האירוע:</string>
     <string name="initial_report_sent_text">דיווח ראשוני עם מיקומך נשלח למשטרה</string>
 
 </resources>
