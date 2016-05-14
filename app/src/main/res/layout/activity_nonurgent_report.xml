@@ -7,237 +7,263 @@
     tools:context="com.example.android.meand100_2.reports.GeneralReport"
     android:nestedScrollingEnabled="true">
 
-    <ScrollView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:id="@+id/scrollView2" >
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/main_content"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <LinearLayout
-            android:orientation="vertical"
+        <ScrollView
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true">
+            android:id="@+id/scrollView2" >
 
-            <TextView
-                android:gravity="right"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="@string/none_urgent_type"
-                android:id="@+id/select_report_type"
-                android:layout_margin="5dp"
-                android:layout_gravity="right" />
-
-            <ImageView
-                xmlns:android="http://schemas.android.com/apk/res/android"
-                android:src="@android:drawable/divider_horizontal_bright"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:scaleType="fitXY"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:paddingBottom="2dp"
-                android:paddingTop="2dp" />
-
-            <Spinner
-                android:id="@+id/select_report_type_spinner"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:prompt="@string/select_report_type" />
-
-            <TextView
+            <LinearLayout
+                android:orientation="vertical"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:gravity="right"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="@string/none_urgent_time"
-                android:id="@+id/time_select_button"
-                android:layout_margin="5dp" />
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true">
 
-
-            <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
-                android:src="@android:drawable/divider_horizontal_bright"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:scaleType="fitXY"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:paddingBottom="2dp"
-                android:paddingTop="2dp"
-                android:id="@+id/imageView" />
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal">
-
-                <Button
+                <TextView
+                    android:gravity="right"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/none_urgent_date"
-                    android:onClick="showDatePickerDialog"
-                    android:id="@+id/pick_date_button" />
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/none_urgent_type"
+                    android:id="@+id/select_report_type"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="right" />
 
-                <Button
-                    android:layout_width="wrap_content"
+                <ImageView
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:src="@android:drawable/divider_horizontal_bright"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="2dp"
+                    android:paddingTop="2dp" />
+
+                <Spinner
+                    android:id="@+id/select_report_type_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:prompt="@string/select_report_type" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="right"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
                     android:text="@string/none_urgent_time"
-                    android:onClick="showTimePickerDialog"
-                    android:id="@+id/pick_time_button" />
+                    android:id="@+id/time_select_button"
+                    android:layout_margin="5dp" />
 
-            </LinearLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="@string/none_urgent_location"
-                android:id="@+id/location_header"
-                android:gravity="right"
-                android:layout_margin="5dp"
-                android:layout_gravity="right" />
+                <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:src="@android:drawable/divider_horizontal_bright"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="2dp"
+                    android:paddingTop="2dp"
+                    android:id="@+id/imageView" />
 
-            <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
-                android:src="@android:drawable/divider_horizontal_bright"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:scaleType="fitXY"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:paddingBottom="2dp"
-                android:paddingTop="2dp"
-                android:id="@+id/imageView2" />
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal">
 
-            <fragment
-                android:id="@+id/place_autocomplete_fragment"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
-                />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/none_urgent_date"
+                        android:onClick="showDatePickerDialog"
+                        android:id="@+id/pick_date_button" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="right"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:id="@+id/role_header"
-                android:text="@string/none_urgent_role"
-                android:layout_margin="5dp"
-                android:layout_gravity="right" />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/none_urgent_time"
+                        android:onClick="showTimePickerDialog"
+                        android:id="@+id/pick_time_button" />
 
-            <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
-                android:src="@android:drawable/divider_horizontal_bright"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:scaleType="fitXY"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:paddingBottom="2dp"
-                android:paddingTop="2dp"
-                android:id="@+id/imageView3" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/role_edittext"
-                android:minLines="1"
-                android:hint="@string/non_urgent_roleexamples"
-                android:layout_marginBottom="6dp" />
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                </LinearLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:id="@+id/name_header"
-                    android:text="@string/none_urgent_name"
-                    android:layout_margin="5dp" />
+                    android:text="@string/none_urgent_location"
+                    android:id="@+id/location_header"
+                    android:gravity="right"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="right" />
 
-                <EditText
+                <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:src="@android:drawable/divider_horizontal_bright"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-                    android:ems="10"
-                    android:id="@+id/name_edittext" />
-            </LinearLayout>
+                    android:scaleType="fitXY"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="2dp"
+                    android:paddingTop="2dp"
+                    android:id="@+id/imageView2" />
 
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
+                <fragment
+                    android:id="@+id/place_autocomplete_fragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:id="@+id/role_header"
+                    android:text="@string/none_urgent_role"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="right" />
+
+                <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:src="@android:drawable/divider_horizontal_bright"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="2dp"
+                    android:paddingTop="2dp"
+                    android:id="@+id/imageView3" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/role_edittext"
+                    android:minLines="1"
+                    android:hint="@string/non_urgent_roleexamples"
+                    android:layout_marginBottom="6dp" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1">
+
+                    <EditText
+                        android:layout_width="172dp"
+                        android:layout_height="fill_parent"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/name_edittext"
+                        android:layout_weight="0.90" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:id="@+id/name_header"
+                        android:text="@string/none_urgent_name"
+                        android:layout_margin="5dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1">
+
+                    <EditText
+                        android:layout_width="194dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:ems="10"
+                        android:id="@+id/id_edittext"
+                        android:maxLength="10" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:id="@+id/id_header"
+                        android:text="@string/none_urgent_id"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1.11" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/linear">
+
+                    <EditText
+                        android:layout_width="265dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress"
+                        android:ems="10"
+                        android:id="@+id/editText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:id="@+id/email_header"
+                        android:text="@string/none_urgent_email"
+                        android:layout_margin="5dp" />
+
+                </LinearLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:id="@+id/id_header"
-                    android:text="@string/none_urgent_id"
-                    android:layout_margin="5dp" />
+                    android:id="@+id/description_header"
+                    android:gravity="right"
+                    android:text="@string/none_urgent_description_header"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="right" />
 
                 <EditText
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="number"
-                    android:ems="10"
-                    android:id="@+id/id_edittext"
-                    android:maxLength="10" />
-            </LinearLayout>
+                    android:id="@+id/editText2" />
 
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/linear">
-
-                <TextView
+                <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:id="@+id/email_header"
-                    android:text="@string/none_urgent_email"
-                    android:layout_margin="5dp" />
-
-                <EditText
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textEmailAddress"
-                    android:ems="10"
-                    android:id="@+id/editText" />
+                    android:theme="@style/PoliceButtons"
+                    android:background="@drawable/buttonshape"
+                    android:text="@string/send_button"
+                    android:id="@+id/send_button"
+                    android:layout_gravity="center_horizontal" />
 
             </LinearLayout>
+        </ScrollView>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:id="@+id/description_header"
-                android:gravity="right"
-                android:text="@string/none_urgent_description_header"
-                android:layout_margin="5dp"
-                android:layout_gravity="right" />
-
-            <EditText
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/editText2" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:theme="@style/PoliceButtons"
-                android:background="@drawable/buttonshape"
-                android:text="@string/send_button"
-                android:id="@+id/send_button"
-                android:layout_gravity="center_horizontal" />
-
-        </LinearLayout>
-    </ScrollView>
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/call_100_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_margin="0dp"
+            android:src="@drawable/call"
+            app:layout_anchor="@id/scrollView2"
+            app:layout_anchorGravity="bottom|left|end"
+            app:borderWidth="0dp"
+            app:elevation="0dp"
+            app:backgroundTint="#e90505" />
+    </android.support.design.widget.CoordinatorLayout>
 
 
 </RelativeLayout>

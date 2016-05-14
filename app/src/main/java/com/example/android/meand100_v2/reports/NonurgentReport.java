@@ -3,6 +3,7 @@ package com.example.android.meand100_v2.reports;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -16,6 +17,7 @@ import android.widget.Spinner;
 import com.example.android.meand100_v2.GeneralStatics;
 import com.example.android.meand100_v2.MainActivity;
 import com.example.android.meand100_v2.R;
+import com.example.android.meand100_v2.reports.types.Call;
 import com.google.android.gms.common.api.Status;
 import com.google.android.gms.location.places.Place;
 import com.google.android.gms.location.places.ui.PlaceAutocompleteFragment;
@@ -63,7 +65,7 @@ public class NonurgentReport extends AppCompatActivity {
                 Log.i("place autocomplete:", "An error occurred: " + status);
             }
         });
-
+        defineEmergancyDialerListener();
     }
 
     public void showDatePickerDialog(View v) {
@@ -115,6 +117,17 @@ public class NonurgentReport extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private void defineEmergancyDialerListener() {
+        FloatingActionButton btn = (FloatingActionButton) findViewById(R.id.call_100_button);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent callIntent = Call.callEmergancyNumber();
+                startActivity(callIntent);
+            }
+        });
     }
 
 }

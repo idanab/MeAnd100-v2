@@ -2,6 +2,7 @@ package com.example.android.meand100_v2;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -16,6 +17,7 @@ import com.example.android.meand100_v2.reports.GeneralReport;
 import com.example.android.meand100_v2.reports.NonurgentReport;
 import com.example.android.meand100_v2.reports.types.AccidentReportParameters;
 import com.example.android.meand100_v2.reports.types.AssaultReportParameters;
+import com.example.android.meand100_v2.reports.types.Call;
 import com.example.android.meand100_v2.reports.types.FireReportParameters;
 import com.example.android.meand100_v2.reports.types.HijackReportParameters;
 import com.example.android.meand100_v2.reports.types.ReportParameters;
@@ -64,9 +66,8 @@ public class ReportFragment extends Fragment {
                 startActivity(intent);
             }
         });
-
+        defineEmergancyDialerListener(root);
         return root;
-
     }
 
 
@@ -120,6 +121,17 @@ public class ReportFragment extends Fragment {
         intent.putExtra("secondQuestion", reportType.getSECOND_QUESTION());
         intent.putExtra("possibleSecondAnswersArray", reportType.getPossibleSecondAnswersArray());
         startActivity(intent);
+    }
+
+    private void defineEmergancyDialerListener(ViewGroup root) {
+        FloatingActionButton btn = (FloatingActionButton) root.findViewById(R.id.call_100_button);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent callIntent = Call.callEmergancyNumber();
+                startActivity(callIntent);
+            }
+        });
     }
 
 }
