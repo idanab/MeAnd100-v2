@@ -176,7 +176,7 @@
             android:layout_gravity="bottom|left"
             android:src="@drawable/call"
             app:layout_anchor="@id/main_content"
-            app:layout_anchorGravity="bottom|left|end"
+            app:layout_anchorGravity="bottom|right|end"
             app:borderWidth="0dp"
             app:elevation="0dp"
             app:backgroundTint="#e90505" />

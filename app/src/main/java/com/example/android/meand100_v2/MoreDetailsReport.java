@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -27,12 +28,13 @@ public class MoreDetailsReport extends AppCompatActivity {
         setContentView(R.layout.activity_more_details_report);
         defineEmergancyDialerListener();
         setTakePhotoListener();
+        setTakeVideoListener();
         setSendButtonAction();
 
     }
 
     private void setSendButtonAction() {
-        Button sendButton = (Button) findViewById(R.id.send_button2);
+        Button sendButton = (Button) findViewById(R.id.send_btn);
         EditText moreInfoTextObject = (EditText) findViewById(R.id.more_info_edittext);
         final String moreInfoText = moreInfoTextObject.getText().toString();
         sendButton.setOnClickListener(new View.OnClickListener() {
@@ -122,8 +124,21 @@ public class MoreDetailsReport extends AppCompatActivity {
         });
     }
 
+    private void setTakeVideoListener() {
+        Button videoButton = (Button) findViewById(R.id.add_video_button);
+        videoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent takeVideoIntent = new Intent(MediaStore.ACTION_VIDEO_CAPTURE);
+                if (takeVideoIntent.resolveActivity(getPackageManager()) != null) {
+                    startActivityForResult(takeVideoIntent, 1);
+                }
+            }
+        });
+    }
+
      private void defineEmergancyDialerListener() {
-        Button btn = (Button) findViewById(R.id.call_100_button);
+         FloatingActionButton btn = (FloatingActionButton) findViewById(R.id.call_100_button);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
