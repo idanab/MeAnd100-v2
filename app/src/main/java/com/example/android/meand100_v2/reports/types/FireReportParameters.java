@@ -10,7 +10,7 @@ import com.example.android.meand100_v2.R;
 public class FireReportParameters extends ReportParameters {
     public FireReportParameters(Context context) {
         super(context);
-        FIRST_QUESTION = context.getResources().getString(R.string.casualties_txt);
+        FIRST_QUESTION = context.getResources().getString(R.string.fire_text);
         possibleFirstAnswersArray.add(context.getResources().getString(R.string.yes_button));
         possibleFirstAnswersArray.add(context.getResources().getString(R.string.no_button));
         SECOND_QUESTION = context.getResources().getString(R.string.fire_location);

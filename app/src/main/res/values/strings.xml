@@ -37,7 +37,7 @@
 
     <!--&lt;!&ndash; ________________________________Specific Reports - General________________________________!&ndash;&gt;-->
 
-    <string name="cancel_button">Cancel report</string>
+    <string name="cancel_button"><b>Cancel report</b></string>
     <string name="casualties_txt">Approximate casualties</string>
     <string name="zero_casualties_txt">0</string>
     <string name="one_to_four_casualties_txt">1-4</string>
@@ -60,7 +60,17 @@
     <string name="attack_type_stabbing">Stabbing</string>
     <string name="attack_type_bomb">Bomb</string>
     <string name="attack_type_suicide">Suicide</string>
-    <string name="attack_type_other">Other</string>
+    <string name="attack_type_bottle">Molotov cocktail</string>
+    <string name="attack_type_stones">Stones Throwing</string>
+
+    <!--&lt;!&ndash; ________________________________Specific Reports - Robbery________________________________!&ndash;&gt;-->
+
+    <string name="is_there_robbery_txt">Is there a robbery going on?</string>
+    <string name="robbery_type">What is the type of the robbery?</string>
+    <string name="robbery_type_bank">Bank</string>
+    <string name="robbery_type_pickpocket">Store or car</string>
+    <string name="robbery_type_domestic">Domestic</string>
+    <string name="robbery_type_car">Store/car</string>
 
 
     <!--&lt;!&ndash; ________________________________Specific Reports - Traffic accident________________________________!&ndash;&gt;-->
@@ -73,6 +83,7 @@
     <string name="accident_type_burn">Burning vehicle</string>
     <string name="accident_type_roll_over">Vehicle rolled over</string>
     <string name="accident_type_other">Other</string>
+    <string name="accident_is_disturbing">האם קיימת הפרעה לתנועה?</string>
 
     <!--&lt;!&ndash; ________________________________Specific Reports - Assault________________________________!&ndash;&gt;-->
 

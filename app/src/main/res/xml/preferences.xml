@@ -58,11 +58,6 @@
             android:title="@string/settings_news"
             android:defaultValue="true" />
 
-        <SwitchPreference
-            android:key="pref_interestIn_legend"
-            android:title="@string/settings_legend"
-            android:defaultValue="true" />
-
     </PreferenceCategory>
 
     <SeekBarPreference

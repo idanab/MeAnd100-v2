@@ -38,9 +38,16 @@ public class NonurgentReport extends AppCompatActivity {
         setSendButtonAction();
         Spinner spinner1 = (Spinner) findViewById(R.id.select_report_type_spinner);
         List<String> list = new ArrayList<String>();
-        list.add("Bicycle stealing");
-        list.add("Driver behaviour");
-        list.add("Noise");
+        list.add("גניבת אופניים");
+        list.add("רכב מתפרע");
+        list.add("מפגע רעש");
+        list.add("הפרת הסדר הציבורי");
+        list.add("אבידה");
+        list.add("מציאה");
+        list.add("התעללות");
+        list.add("הטרדה מינית");
+        list.add("מסירת מידע מודיעיני");
+        list.add("אחר ");
 
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>
                 (this, android.R.layout.simple_spinner_item,list);

@@ -36,7 +36,7 @@ public class MySimpleArrayAdapter extends ArrayAdapter<HeaderStory> {
             TextView distanceTextView = (TextView) rowView.findViewById(R.id.distance_text);
             TextView dateTextView = (TextView) rowView.findViewById(R.id.date_text);
             TextView timeTextView = (TextView) rowView.findViewById(R.id.time_text);
-            photoImageView.setImageResource(R.drawable.abc_btn_switch_to_on_mtrl_00012);
+            //photoImageView.setImageResource(R.drawable.abc_btn_switch_to_on_mtrl_00012);
             headerTextView.setText(values.get(position).getHeader());
             distanceTextView.setText(values.get(position).getLocation().toString());
             dateTextView.setText(values.get(position).getDate());

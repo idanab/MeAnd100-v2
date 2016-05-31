@@ -154,7 +154,7 @@ public class GeneralReport extends AppCompatActivity  {
                 radioButton.setVisibility(View.VISIBLE);
             }
             else
-                radioButton.setVisibility(View.INVISIBLE);
+                radioButton.setVisibility(View.GONE);
         }
     }
 

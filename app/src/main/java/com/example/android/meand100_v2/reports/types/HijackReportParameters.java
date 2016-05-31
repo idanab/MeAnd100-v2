@@ -11,16 +11,14 @@ public class HijackReportParameters extends ReportParameters {
     public HijackReportParameters(Context context) {
         super(context);
         FIRST_QUESTION = context.getResources().getString(R.string.kidnapping_text);
-        possibleFirstAnswersArray.add(context.getResources().getString(R.string.one_kidnapping_txt));
-        possibleFirstAnswersArray.add(context.getResources().getString(R.string.two_to_four_kidnapping_txt));
-        possibleFirstAnswersArray.add(context.getResources().getString(R.string.five_to_eight_kidnapping_txt));
-        possibleFirstAnswersArray.add(context.getResources().getString(R.string.more_than_eight_kidnapping_txt));
+        possibleFirstAnswersArray.add(context.getResources().getString(R.string.yes_button));
+        possibleFirstAnswersArray.add(context.getResources().getString(R.string.no_button));
 
         SECOND_QUESTION = context.getResources().getString(R.string.kidnappers_txt);
         possibleSecondAnswersArray.add(context.getResources().getString(R.string.one_kidnappers_txt));
         possibleSecondAnswersArray.add(context.getResources().getString(R.string.two_to_four_kidnappers_txt));;
-        possibleSecondAnswersArray.add(context.getResources().getString(R.string.two_to_four_kidnappers_txt));;
-        possibleSecondAnswersArray.add(context.getResources().getString(R.string.more_than_ten_kidnappers_txt));;
+        possibleSecondAnswersArray.add(context.getResources().getString(R.string.five_to_eight_kidnapping_txt));;
+        possibleSecondAnswersArray.add(context.getResources().getString(R.string.more_than_eight_kidnapping_txt));;
 
     }
 }

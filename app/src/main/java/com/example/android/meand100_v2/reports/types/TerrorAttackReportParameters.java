@@ -17,7 +17,9 @@ public class TerrorAttackReportParameters extends  ReportParameters {
         possibleSecondAnswersArray.add(context.getResources().getString(R.string.attack_type_stabbing));
         possibleSecondAnswersArray.add(context.getResources().getString(R.string.attack_type_bomb));
         possibleSecondAnswersArray.add(context.getResources().getString(R.string.attack_type_suicide));
-        possibleSecondAnswersArray.add(context.getResources().getString(R.string.attack_type_other));
+        possibleSecondAnswersArray.add(context.getResources().getString(R.string.attack_type_bottle));
+        possibleSecondAnswersArray.add(context.getResources().getString(R.string.attack_type_stones));
+
     }
 
 
