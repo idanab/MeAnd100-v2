@@ -31,11 +31,15 @@
         android:id="@+id/tab_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/toolbar"
-        android:background="#ff4b54a7"
+        android:background="?attr/colorPrimary"
         android:elevation="6dp"
+        app:tabIndicatorColor="@android:color/white"
+        app:tabTextAppearance="@style/MyTabLayoutTextAppearance"
         android:minHeight="?attr/actionBarSize"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <android.support.v4.view.ViewPager
         android:id="@+id/pager"

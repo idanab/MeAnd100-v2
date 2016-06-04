@@ -7,17 +7,17 @@
         <!--   darker variant for the status bar and contextual app bars -->
         <item name="colorPrimaryDark">#283593</item>
         <!--   theme UI controls like checkboxes and text fields -->
-        <item name="colorAccent">#706969</item>
-        <item name="color">#bbbbd4</item>
+        <item name="colorAccent">#0407bc</item>
+        <item name="color">#112396</item>
     </style>
 
     <style name="PoliceButtons">
-        <item name="android:textColor">#CED5DE</item>
+        <item name="android:textColor">#ffffff</item>
         <item name="android:textSize">30sp</item>
         <item name="android:layout_width">157dp</item>
         <item name="android:layout_height">60dp</item>
         <item name="android:background">@drawable/buttonshape</item>
-        <item name="android:shadowColor">#1EA868</item>
+        <item name="android:shadowColor">#0407bc</item>
         <item name="android:shadowDx">0</item>
         <item name="android:shadowDy">0</item>
         <item name="android:shadowRadius">5</item>
@@ -27,5 +27,10 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="MyTabLayoutTextAppearance" parent="TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#bfb3b3</item>
+
+    </style>
 
 </resources>

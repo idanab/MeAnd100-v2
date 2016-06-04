@@ -201,5 +201,7 @@
     <string name="initial_report_sent_text">A report with your location has been sent to the police</string>
     <string name="title_activity_public_relations">PublicRelationsActivity</string>
     <string name="title_activity_forms">FormsActivity</string>
+    <string name="fill_details">Please fill out all details and than hit \'send\'</string>
+    <string name="continue_txt">continue</string>
 
 </resources>

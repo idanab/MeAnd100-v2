@@ -13,16 +13,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <ScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:scrollbars="none"
-        android:id="@+id/scrollView" >
-
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:id="@+id/linLey"
+            android:scrollIndicators="none">
 
             <GridView
                 android:layout_width="wrap_content"
@@ -37,15 +33,20 @@
                 android:id="@+id/reports_list_gridview"
                 android:scaleType="fitXY"
                 android:adjustViewBounds="true"
-                android:layout_margin="5dp" />
+                android:scrollIndicators="none"
+                android:touchscreenBlocksFocus="true"
+                android:smoothScrollbar="false" />
 
             <Button
                 android:text="@string/not_urgent_report_button"
                 android:id="@+id/non_urgent_button"
-                android:layout_width="fill_parent"
+                android:layout_width="260dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:textSize="20dp" />
+                android:background="?attr/colorPrimaryDark"
+                android:textColor="#FFFFFF"
+                android:textSize="20dp"
+                android:layout_gravity="bottom" />
 
             <LinearLayout
                 android:orientation="horizontal"
@@ -54,7 +55,6 @@
 
             </LinearLayout>
         </LinearLayout>
-    </ScrollView>
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/call_100_button"
@@ -62,11 +62,13 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|left"
             android:src="@drawable/call"
-            app:layout_anchor="@id/scrollView"
+            app:layout_anchor="@id/linLey"
             app:layout_anchorGravity="bottom|right|end"
             app:borderWidth="0dp"
             app:elevation="0dp"
             app:backgroundTint="#e90505" />
     </android.support.design.widget.CoordinatorLayout>
+
+
 
 </RelativeLayout>

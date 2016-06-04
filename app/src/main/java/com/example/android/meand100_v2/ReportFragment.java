@@ -56,8 +56,6 @@ public class ReportFragment extends Fragment {
         return root;
     }
 
-
-
     private void defineEmergancyDialerListener(ViewGroup root) {
         FloatingActionButton btn = (FloatingActionButton) root.findViewById(R.id.call_100_button);
         btn.setOnClickListener(new View.OnClickListener() {

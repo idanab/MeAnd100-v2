@@ -22,7 +22,7 @@
 
     <string name="terrorattack_report_button">פיגוע</string>
     <string name="accident_report_button">תאונת דרכים</string>
-    <string name="assult_report_button">הטרדה</string>
+    <string name="assult_report_button">תקיפה</string>
     <string name="hijack_report_button">חטיפה</string>
     <string name="fire_report_button">שריפה</string>
     <string name="robbery_report_button">שוד</string>
@@ -38,12 +38,12 @@
     <!--&lt;!&ndash; ________________________________Specific Reports - General________________________________!&ndash;&gt;-->
 
     <string name="cancel_button"><b>בטל דיווח</b></string>
-    <string name="casualties_txt">מספר נפגעים משוער</string>
+    <string name="casualties_txt"><b>מספר נפגעים משוער</b></string>
     <string name="zero_casualties_txt">0</string>
     <string name="one_to_four_casualties_txt">1\-4</string>
     <string name="five_to_ten_casualties_txt">5\-10</string>
     <string name="more_than_ten_casualties_txt">מעל 10</string>
-    <string name="add_more_information_txt">הוסף מידע נוסף</string>
+    <string name="add_more_information_txt"><b>הוסף מידע נוסף</b></string>
     <string name="call_police_button">התקשר</string>
     <string name="yes_button">כן</string>
     <string name="no_button">לא</string>
@@ -53,9 +53,9 @@
 
     <!--&lt;!&ndash; ________________________________Specific Reports - Terror________________________________!&ndash;&gt;-->
 
-    <string name="report_sent_alert_txt">דיווח אודות האירוע נשלח למשטרה</string>
-    <string name="is_terrorist_neutralize_txt">האם התוקף נוטרל?</string>
-    <string name="attack_type">פרט את סוג האירוע</string>
+    <string name="report_sent_alert_txt"><b>דיווח אודות האירוע נשלח למשטרה</b></string>
+    <string name="is_terrorist_neutralize_txt"><b>האם התוקף נוטרל?</b></string>
+    <string name="attack_type"><b>פרט את סוג האירוע</b></string>
     <string name="attack_type_shooting">ירי</string>
     <string name="attack_type_stabbing">דקירה</string>
     <string name="attack_type_bomb">פצצה</string>
@@ -73,7 +73,7 @@
     <string name="accident_type_burn">רכב עולה באש</string>
     <string name="accident_type_roll_over">רכב התהפך</string>
     <string name="accident_type_other">אחר</string>
-    <string name="accident_is_disturbing">האם קיימת הפרעה לתנועה?</string>
+    <string name="accident_is_disturbing"><b>פרט את אופי תאונת הדרכים</b></string>
 
     <!--&lt;!&ndash; ________________________________Specific Reports - Assault________________________________!&ndash;&gt;-->
 
@@ -93,13 +93,13 @@
     <!--&lt;!&ndash; ________________________________Specific Reports - Kidnapping________________________________!&ndash;&gt;-->
 
     <string name="report_sent_alert_txt_kidnapping">דיווח אודות האירוע נשלח למשטרה</string>
-    <string name="kidnapping_text">האם יש נפגעים?</string>
-    <string name="kidnapping_txt">מספר חוטפים משוער</string>
+    <string name="kidnapping_text"><b>האם יש נפגעים?</b></string>
+    <string name="kidnapping_txt"><b>מספר חטופים משוער</b></string>
     <string name="one_kidnapping_txt">1</string>
     <string name="two_to_four_kidnapping_txt">2 עד 4</string>
     <string name="five_to_eight_kidnapping_txt">5 עד 8</string>
     <string name="more_than_eight_kidnapping_txt">מעל 8</string>
-    <string name="kidnappers_txt">מספר חוטפים משוער</string>
+    <string name="kidnappers_txt"><b>מספר חוטפים משוער</b></string>
     <string name="one_kidnappers_txt">1</string>
     <string name="two_to_four_kidnappers_txt">2 עד 4</string>
     <string name="fiv_to_ten_kidnappers_txt">5\-10</string>
@@ -108,8 +108,8 @@
     <!--&lt;!&ndash; ________________________________Specific Reports - Fire________________________________!&ndash;&gt;-->
 
     <string name="report_sent_alert_txt_fire">דיווח אודות האירוע נשלח למשטרה</string>
-    <string name="fire_text">האם יש נפגעים?</string>
-    <string name="fire_location">מיקום השריפה</string>
+    <string name="fire_text"><b>האם יש נפגעים?</b></string>
+    <string name="fire_location"><b>מיקום השריפה</b></string>
     <string name="fire_type_privateresidence">בית פרטי</string>
     <string name="fire_type_public">מקום ציבורי</string>
     <string name="fire_type_agriculture">שטח חקלאי</string>
@@ -189,14 +189,14 @@
     <string name="non_urgent_roleexamples">עד ראיה, קורבן וכו</string>
     <string name="none_urgent_description_header">תיאור האירוע:</string>
     <string name="initial_report_sent_text">דיווח ראשוני עם מיקומך נשלח למשטרה</string>
-    <string name="robbery_type">מהו אופי השוד?</string>
+    <string name="robbery_type"><b>מהו אופי השוד?</b></string>
     <string name="robbery_type_bank">בנק</string>
     <string name="robbery_type_domestic">בית</string>
     <string name="robbery_type_pickpocket">חנות/מרכז מסחרי או רכב</string>
     <string name="robbery_type_car">חנות/מרכז מסחרי או רכב</string>
-    <string name="is_there_robbery_txt">האם התרחש שוד?</string>
-
-
+    <string name="is_there_robbery_txt"><b>האם התרחש שוד?</b></string>
+    <string name="fill_details">אנא מלא את כל הפרטים הנדרשים</string>
+    <string name="continue_txt">המשך</string>
 
 
 </resources>

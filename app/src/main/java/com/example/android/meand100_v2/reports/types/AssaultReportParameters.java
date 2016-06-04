@@ -10,7 +10,7 @@ import com.example.android.meand100_v2.R;
 public class AssaultReportParameters extends ReportParameters {
     public AssaultReportParameters(Context context) {
         super(context);
-        FIRST_QUESTION = context.getResources().getString(R.string.casualties_txt);
+        FIRST_QUESTION = context.getResources().getString(R.string.kidnapping_text);
         possibleFirstAnswersArray.add(context.getResources().getString(R.string.yes_button));
         possibleFirstAnswersArray.add(context.getResources().getString(R.string.no_button));
         SECOND_QUESTION = context.getResources().getString(R.string.assault_type);

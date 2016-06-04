@@ -13,6 +13,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
@@ -46,9 +48,27 @@ public class GeneralReport extends AppCompatActivity  {
         addQuestions();
         defineEmergancyDialerListener();
         setSendButtonAction();
-        setCancelationDialog();
+        TextView reportSentTxt = (TextView) findViewById(R.id.report_sent_text);
+        Animation hyperspaceJump = AnimationUtils.loadAnimation(this, R.anim.hyperspace_jump);
+        reportSentTxt.startAnimation(hyperspaceJump);
     }
 
+    @Override
+    public void onBackPressed() {
+        AlertDialog alertDialog = new AlertDialog.Builder(GeneralReport.this).create(); //Read Update
+        alertDialog.setTitle("ביטול דיווח");
+        alertDialog.setMessage("שים לב, מספר ביטולי דיווח עלולים להוביל לחסימתך");
+        alertDialog.setButton(DialogInterface.BUTTON_POSITIVE, "אישור", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);//go back to main page
+                startActivity(intent);
+            }
+        });
+        alertDialog.show();
+        GeneralStatics.sendReportCancelation(getApplicationContext());
+    }
 
     @Override
     protected void onStart() {
@@ -115,8 +135,8 @@ public class GeneralReport extends AppCompatActivity  {
         }
         catch (NullPointerException e) { //happens if one or more questions have not been answered
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            builder.setMessage("Please fill out all details and than hit 'send'")
-                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            builder.setMessage(R.string.fill_details)
+                    .setPositiveButton(R.string.continue_txt, new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int id) {
                             dialog.dismiss();
                         }
@@ -157,36 +177,6 @@ public class GeneralReport extends AppCompatActivity  {
                 radioButton.setVisibility(View.GONE);
         }
     }
-
-    /**
-     * a dialog that is shown when a user cancels the reportndroi
-     */
-    private void setCancelationDialog() {
-        Button cancelButton = (Button) findViewById(R.id.cancel_button);
-        cancelButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                AlertDialog alertDialog = new AlertDialog.Builder(GeneralReport.this).create(); //Read Update
-                alertDialog.setTitle("ביטול דיווח");
-                alertDialog.setMessage("שים לב, מספר ביטולי דיווח עלולים להוביל לחסימתך");
-
-
-
-                alertDialog.setButton(DialogInterface.BUTTON_POSITIVE, "OK", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-                        //TODO: send a cancellation message to the police
-                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);//go back to main page
-                        startActivity(intent);
-                    }
-                });
-                alertDialog.show();
-                GeneralStatics.sendReportCancelation(getApplicationContext());
-            }
-        });
-    }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

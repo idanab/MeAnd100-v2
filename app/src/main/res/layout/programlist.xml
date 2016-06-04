@@ -19,9 +19,11 @@
         android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="15dp"
+        android:textSize="19dp"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
-        android:text="TextView" />
+        android:textStyle="bold"
+        android:text="TextView"
+        android:textColor="#090a2a" />
 
 </LinearLayout> 

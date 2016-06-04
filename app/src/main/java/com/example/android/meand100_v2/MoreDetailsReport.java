@@ -34,7 +34,7 @@ public class MoreDetailsReport extends AppCompatActivity {
     }
 
     private void setSendButtonAction() {
-        Button sendButton = (Button) findViewById(R.id.send_btn);
+        Button sendButton = (Button) findViewById(R.id.send_button);
         EditText moreInfoTextObject = (EditText) findViewById(R.id.more_info_edittext);
         final String moreInfoText = moreInfoTextObject.getText().toString();
         sendButton.setOnClickListener(new View.OnClickListener() {
@@ -63,8 +63,8 @@ public class MoreDetailsReport extends AppCompatActivity {
         }
         catch (NullPointerException e) {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            builder.setMessage("Please fill out all details and than hit 'send'")
-                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            builder.setMessage(R.string.fill_details)
+                    .setPositiveButton(R.string.continue_txt, new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int id) {
                             dialog.dismiss();
                         }
@@ -74,6 +74,24 @@ public class MoreDetailsReport extends AppCompatActivity {
         }
         return false;
     }
+
+    @Override
+    public void onBackPressed() {
+        AlertDialog alertDialog = new AlertDialog.Builder(MoreDetailsReport.this).create(); //Read Update
+        alertDialog.setTitle("ביטול דיווח");
+        alertDialog.setMessage("שים לב, מספר ביטולי דיווח עלולים להוביל לחסימתך");
+        alertDialog.setButton(DialogInterface.BUTTON_POSITIVE, "אישור", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);//go back to main page
+                startActivity(intent);
+            }
+        });
+        alertDialog.show();
+        GeneralStatics.sendReportCancelation(getApplicationContext());
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
