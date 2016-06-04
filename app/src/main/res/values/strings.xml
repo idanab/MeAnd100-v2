@@ -125,7 +125,7 @@
     <string name="fire_type_agriculture">Agricultural area</string>
     <string name="fire_type_other">Other</string>
 
-  <!--&lt;!&ndash; ________________________________Specific Reports - Cancel notice________________________________!&ndash;&gt;-->
+    <!--&lt;!&ndash; ________________________________Specific Reports - Cancel notice________________________________!&ndash;&gt;-->
 
     <string name="cancel_notice_txt">Please notice, \n Should there be multiple false reports, \n or your phone is considered to have made repeated harrestmants. \n you will not be permitted to make any further reports \n from this device. \n In such a case, you may be subject to further \n inquery by the Police. \n For your information, this app has a \n Trial state.</string>
     <string name="cancel_read">I have read this notice</string>
@@ -152,7 +152,6 @@
     <string name="none_urgent_notice_txt">Please note, \n Uppon pressing "send", this form \n will be sent to the Police - who may or may not pursue the subject. \n The Police my contact you for additional info. \n Should your report be jusged as \n Spam or Harrestmant, you will not be permitted to make any further reports \n from this device. \n If yhe information given here is true and relevant, press "Send". /n If you want to revise your report, press "Cancel".</string>
     <string name="none_urgent_read">I have read this notice</string>
     <string name="none_urgent_cancel">Cancel</string>
-
 
 
     <!--&lt;!&ndash; ________________________________Settings________________________________!&ndash;&gt;-->
@@ -200,5 +199,7 @@
     <string name="non_urgent_roleexamples">Victim, Eye witeness etc</string>
     <string name="none_urgent_description_header">Description of the occurance:</string>
     <string name="initial_report_sent_text">A report with your location has been sent to the police</string>
+    <string name="title_activity_public_relations">PublicRelationsActivity</string>
+    <string name="title_activity_forms">FormsActivity</string>
 
 </resources>

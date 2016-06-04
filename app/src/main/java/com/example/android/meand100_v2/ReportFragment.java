@@ -25,10 +25,6 @@ import com.example.android.meand100_v2.reports.types.RobberyReportParameters;
 import com.example.android.meand100_v2.reports.types.TerrorAttackReportParameters;
 
 public class ReportFragment extends Fragment {
-
-    private final String PNIOT_HAZIBUR_URL = "http://www.police.gov.il/portal.aspx?mid=39";
-    private final String FORMS_URL = "http://www.police.gov.il/tfasim.aspx";
-    //.
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         ViewGroup root = (ViewGroup) inflater.inflate(R.layout.activity_reports_acitvity_portal, null);
@@ -39,22 +35,6 @@ public class ReportFragment extends Fragment {
             public void onItemClick(AdapterView<?> parent, View v,
                                     int position, long id) {
                 detectReportTypeByNumber(position);
-            }
-        });
-
-        final Button formsButton = (Button) root.findViewById(R.id.forms_button);
-        formsButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                GeneralStatics.goToWebsite(getActivity(), FORMS_URL);
-            }
-        });
-
-        final Button pniot_button = (Button) root.findViewById(R.id.pniot_button);
-        pniot_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                GeneralStatics.goToWebsite(getActivity(), PNIOT_HAZIBUR_URL);
             }
         });
 

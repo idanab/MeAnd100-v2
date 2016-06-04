@@ -83,6 +83,14 @@ public class MainActivity extends AppCompatActivity {
             startActivity(new Intent(this, SettingsActivity.class));
             return(true);
         }
+        if (id == R.id.action_publicrelations) {
+            startActivity(new Intent(this, PublicRelationsActivity.class));
+            return(true);
+        }
+        if (id == R.id.action_forms) {
+            startActivity(new Intent(this, FormsActivity.class));
+            return(true);
+        }
         return super.onOptionsItemSelected(item);
     }
 }

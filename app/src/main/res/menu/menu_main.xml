@@ -3,4 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools" tools:context=".MeAnd100">
     <item android:id="@+id/action_settings" android:title="@string/action_settings"
         android:orderInCategory="100" app:showAsAction="never"/>
+    <item android:id="@+id/action_publicrelations" android:title="@string/pniot_hazibur_button"
+        android:orderInCategory="100" app:showAsAction="never"/>
+    <item android:id="@+id/action_forms" android:title="@string/forms_button"
+        android:orderInCategory="100" app:showAsAction="never"/>
 </menu>
