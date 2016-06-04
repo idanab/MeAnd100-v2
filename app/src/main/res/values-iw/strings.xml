@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name"><![CDATA[Me&100]]></string>
+    <string name="app_name"><![CDATA[100&Me]]></string>
     <!--important- do not change next 'google_app_id'!!!-->
     <string name="google_app_id">AIzaSyAb5lPf1w8REr2XUy3dJ95ujFd2NyIbZD4</string>
     <string name="gcm_defaultSenderId">162679940561</string>
@@ -20,7 +20,7 @@
 
     <!--&lt;!&ndash; ________________________________Reports Menu________________________________!&ndash;&gt;-->
 
-    <string name="terrorattack_report_button">Terror Attack</string>
+    <string name="terrorattack_report_button">פיגוע</string>
     <string name="accident_report_button">תאונת דרכים</string>
     <string name="assult_report_button">הטרדה</string>
     <string name="hijack_report_button">חטיפה</string>
