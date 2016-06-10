@@ -1,0 +1,223 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.example.android.meand100_2.reports.GeneralReport"
+    android:nestedScrollingEnabled="true">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/scrollView2"
+        android:scrollIndicators="none">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:padding="2dp">
+
+            <TextView
+                android:gravity="right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/none_urgent_type"
+                android:id="@+id/select_report_type"
+                android:layout_margin="5dp"
+                android:layout_gravity="right" />
+
+            <Spinner
+                android:id="@+id/select_report_type_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:layout_gravity="right"
+                android:textSize="20pt"
+                android:prompt="@string/select_report_type" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="right"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/none_urgent_time"
+                android:id="@+id/time_select_button"
+                android:layout_margin="5dp" />
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:layout_width="0dip"
+                    android:layout_height="26dp"
+                    android:layout_weight="1"
+                    android:textColor="#FFFFFF"
+                    android:text="@string/none_urgent_date"
+                    android:onClick="showDatePickerDialog"
+                    android:id="@+id/pick_date_button"
+                    android:layout_marginRight="0dp"
+                    android:background="#303F9F"
+                    android:layout_margin="5dp"
+                    />
+
+                <Button
+                    android:layout_width="0dip"
+                    android:layout_height="26dp"
+                    android:layout_weight="1"
+                    android:text="@string/none_urgent_time"
+                    android:onClick="showTimePickerDialog"
+                    android:id="@+id/pick_time_button"
+                    android:background="#303F9F"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginRight="0dp"
+                    android:layout_margin="5dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/role_header"
+                android:text="@string/none_urgent_role"
+                android:layout_margin="5dp"
+                android:layout_gravity="right" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <Button
+                    android:layout_width="0dip"
+                    android:layout_height="26dp"
+                    android:layout_weight="1"
+                    android:textColor="#FFACA0A0"
+                    android:text="@string/none_urgent_role_victim"
+                    android:id="@+id/victim_btn"
+                    android:layout_marginRight="0dp"
+                    android:background="#FFFFFF"
+                    android:layout_margin="5dp" />
+
+                <Button
+                    android:layout_width="0dip"
+                    android:layout_height="26dp"
+                    android:layout_weight="1"
+                    android:textColor="#FFACA0A0"
+                    android:text="@string/none_urgent_role_eye_witness"
+                    android:id="@+id/witness_btn"
+                    android:layout_marginRight="0dp"
+                    android:background="#FFFFFF"
+                    android:layout_margin="5dp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/none_urgent_location"
+                android:id="@+id/location_header"
+                android:gravity="right"
+                android:layout_margin="5dp"
+                android:layout_gravity="right" />
+
+            <fragment
+                android:id="@+id/place_autocomplete_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/more_details_edittext_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/description_edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:hint="@string/none_urgent_additional_contact_info"
+                    android:inputType="textNoSuggestions" />
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/name_edittext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:hint="@string/none_urgent_name"
+                        android:inputType="textPersonName" />
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/idd_edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:hint="@string/none_urgent_id"
+                    android:inputType="number" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="7dp">
+
+                <EditText
+                    android:id="@+id/email_edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:hint="@string/none_urgent_email"
+                    android:inputType="textEmailAddress" />
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:gravity="center|bottom"
+                android:orientation="vertical"
+                android:layout_marginLeft="3dp">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/colorPrimaryDark"
+                    android:layout_gravity="bottom"
+                    android:text="@string/send_button"
+                    android:id="@+id/send_button"
+                    android:textSize="20dp"
+                    android:textColor="#FFFFFF"
+                    android:elevation="10dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -134,11 +134,11 @@
 
     <!--&lt;!&ndash; ________________________________Specific Reports - None urgent________________________________!&ndash;&gt;-->
 
-    <string name="none_urgent_type">State the nature of the report</string>
+    <string name="none_urgent_type">Type </string>
     <string name="none_urgent_date">Date</string>
     <string name="none_urgent_time">Time</string>
     <string name="none_urgent_location">Location</string>
-    <string name="none_urgent_role">More details</string>
+    <string name="none_urgent_role">Role</string>
     <string name="none_urgent_role_victim">Victim</string>
     <string name="none_urgent_role_victim_bold"><b>Victim</b></string>
     <string name="none_urgent_role_eye_witness">Eye witness</string>
@@ -148,7 +148,7 @@
     <string name="none_urgent_name">Name:</string>
     <string name="none_urgent_id">ID:</string>
     <string name="none_urgent_email">Email:</string>
-    <string name="none_urgent_additional_contact_info">Additional Contact Information</string>
+    <string name="none_urgent_additional_contact_info">Additional Information</string>
     <string name="none_urgent_description">Describe the incident</string>
     <string name="none_urgent_only_hundred">Be aware you can only use 100 words</string>
     <string name="none_urgent_mendatory">*Mendatory fields</string>
