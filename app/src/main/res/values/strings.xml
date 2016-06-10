@@ -53,7 +53,7 @@
 
     <!--&lt;!&ndash; ________________________________Specific Reports - Terror________________________________!&ndash;&gt;-->
 
-    <string name="report_sent_alert_txt">A report regarding a Terror attack near you has been sent</string>
+    <string name="report_sent_alert_txt"><b>A report has been sent to the police</b></string>
     <string name="is_terrorist_neutralize_txt">Has the assailant been neutralized?</string>
     <string name="attack_type">State the type of Terror attack in question</string>
     <string name="attack_type_shooting">Shooting</string>
@@ -83,7 +83,7 @@
     <string name="accident_type_burn">Burning vehicle</string>
     <string name="accident_type_roll_over">Vehicle rolled over</string>
     <string name="accident_type_other">Other</string>
-    <string name="accident_is_disturbing">האם קיימת הפרעה לתנועה?</string>
+    <string name="accident_is_disturbing">Is the accident disturbing traffic?</string>
 
     <!--&lt;!&ndash; ________________________________Specific Reports - Assault________________________________!&ndash;&gt;-->
 
@@ -173,7 +173,6 @@
     <string name="settings_public">Public Service</string>
     <string name="settings_wanted">Public Assistance Requests</string>
     <string name="settings_news">Police News</string>
-    <string name="settings_legend">Legend</string>
 
     <string name="settings_push_notifications">Notifications</string>
     <string name="settings_push_notifications_summary">Decide whether you are interested in getting push notifications to your device</string>
@@ -203,5 +202,7 @@
     <string name="title_activity_forms">FormsActivity</string>
     <string name="fill_details">Please fill out all details and than hit \'send\'</string>
     <string name="continue_txt">continue</string>
+    <string name="notice">To your attention</string>
+    <string name="block_warning">Too much false reports can cause a block blocking your user</string>
 
 </resources>

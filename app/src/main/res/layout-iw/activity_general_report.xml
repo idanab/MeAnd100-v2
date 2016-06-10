@@ -65,44 +65,44 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="left"
+            android:layout_gravity="right"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="first"
+            android:text="first_question"
             android:id="@+id/first_question_header" />
 
         <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="left"
+            android:layout_gravity="right"
             android:orientation="horizontal"
             android:id="@+id/first_radio_group"
             android:layout_marginBottom="15dp">
 
             <RadioButton
                 android:layout_width="wrap_content"
-                android:layout_gravity="left"
+                android:layout_gravity="right"
                 android:layout_height="wrap_content"
                 android:text="New RadioButton"
                 android:button="@null"
-                android:drawableLeft="@android:drawable/btn_radio"
+                android:drawableRight="@android:drawable/btn_radio"
                 android:id="@+id/radioButton" />
 
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="New RadioButton"
-                android:layout_gravity="left"
+                android:layout_gravity="right"
                 android:button="@null"
-                android:drawableLeft="@android:drawable/btn_radio"
+                android:drawableRight="@android:drawable/btn_radio"
                 android:id="@+id/radioButton2" />
 
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="New RadioButton"
-                android:layout_gravity="left"
+                android:layout_gravity="right"
                 android:button="@null"
-                android:drawableLeft="@android:drawable/btn_radio"
+                android:drawableRight="@android:drawable/btn_radio"
                 android:id="@+id/radioButton3" />
 
         </RadioGroup>
@@ -110,7 +110,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="left"
+            android:layout_gravity="right"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="second_question"
             android:id="@+id/second_question_header" />
@@ -118,7 +118,7 @@
         <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="left"
+            android:layout_gravity="right"
             android:orientation="horizontal"
             android:id="@+id/second_radio_group"
             android:layout_marginBottom="15dp">
@@ -126,47 +126,47 @@
             <RadioButton
                 android:id="@+id/radio_1"
                 android:button="@null"
-                android:drawableLeft="@android:drawable/btn_radio"
+                android:drawableRight="@android:drawable/btn_radio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="left"
+                android:layout_gravity="right"
                 android:text="1Op"
                 android:checked="false" />
 
             <RadioButton
                 android:id="@+id/radio_2"
                 android:button="@null"
-                android:drawableLeft="@android:drawable/btn_radio"
+                android:drawableRight="@android:drawable/btn_radio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="left"
+                android:layout_gravity="right"
                 android:text="2Op" />
 
             <RadioButton
                 android:id="@+id/radio_3"
                 android:button="@null"
-                android:drawableLeft="@android:drawable/btn_radio"
+                android:drawableRight="@android:drawable/btn_radio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="left"
+                android:layout_gravity="right"
                 android:text="2Op" />
 
             <RadioButton
                 android:id="@+id/radio_4"
                 android:button="@null"
-                android:drawableLeft="@android:drawable/btn_radio"
+                android:drawableRight="@android:drawable/btn_radio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="left"
+                android:layout_gravity="right"
                 android:text="2Op" />
 
             <RadioButton
                 android:id="@+id/radio_5"
                 android:button="@null"
-                android:drawableLeft="@android:drawable/btn_radio"
+                android:drawableRight="@android:drawable/btn_radio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="left"
+                android:layout_gravity="right"
                 android:text="2Op" />
 
         </RadioGroup>

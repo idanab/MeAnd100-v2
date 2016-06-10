@@ -56,8 +56,8 @@ public class GeneralReport extends AppCompatActivity  {
     @Override
     public void onBackPressed() {
         AlertDialog alertDialog = new AlertDialog.Builder(GeneralReport.this).create(); //Read Update
-        alertDialog.setTitle("ביטול דיווח");
-        alertDialog.setMessage("שים לב, מספר ביטולי דיווח עלולים להוביל לחסימתך");
+        alertDialog.setTitle(R.string.notice);
+        alertDialog.setMessage(getString(R.string.block_warning));
         alertDialog.setButton(DialogInterface.BUTTON_POSITIVE, "אישור", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {

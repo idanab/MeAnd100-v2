@@ -197,6 +197,10 @@
     <string name="is_there_robbery_txt"><b>האם התרחש שוד?</b></string>
     <string name="fill_details">אנא מלא את כל הפרטים הנדרשים</string>
     <string name="continue_txt">המשך</string>
+    <string name="title_activity_forms">FormsActivity</string>
+    <string name="title_activity_public_relations">PublicRelationsActivity</string>
+    <string name="block_warning">מספר רב של דיווחי שווא עלולים לגרום לחסימתך</string>
+    <string name="notice">לתשומת לבך</string>
 
 
 </resources>
