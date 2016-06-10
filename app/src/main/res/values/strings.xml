@@ -135,12 +135,15 @@
     <!--&lt;!&ndash; ________________________________Specific Reports - None urgent________________________________!&ndash;&gt;-->
 
     <string name="none_urgent_type">State the nature of the report</string>
-    <string name="none_urgent_date">Date of incident</string>
-    <string name="none_urgent_time">Time of incident</string>
-    <string name="none_urgent_location">Where did the incident take place?</string>
-    <string name="none_urgent_role">What was your role in the incident?</string>
+    <string name="none_urgent_date">Date</string>
+    <string name="none_urgent_time">Time</string>
+    <string name="none_urgent_location">Location</string>
+    <string name="none_urgent_role">More details</string>
     <string name="none_urgent_role_victim">Victim</string>
+    <string name="none_urgent_role_victim_bold"><b>Victim</b></string>
     <string name="none_urgent_role_eye_witness">Eye witness</string>
+    <string name="none_urgent_role_witness_bold"><b>Eye witness</b></string>
+
     <string name="none_urgent_other">Other</string>
     <string name="none_urgent_name">Name:</string>
     <string name="none_urgent_id">ID:</string>
@@ -196,7 +199,7 @@
     <string name="select_report_type">select the type of the report:</string>
     <string name="time_select_header">Time of occurance:</string>
     <string name="non_urgent_roleexamples">Victim, Eye witeness etc</string>
-    <string name="none_urgent_description_header">Description of the occurance:</string>
+    <string name="none_urgent_description_header">More details</string>
     <string name="initial_report_sent_text">A report with your location has been sent to the police</string>
     <string name="title_activity_public_relations">PublicRelationsActivity</string>
     <string name="title_activity_forms">FormsActivity</string>
@@ -205,4 +208,11 @@
     <string name="notice">To your attention</string>
     <string name="block_warning">Too much false reports can cause a block blocking your user</string>
 
+    <string-array name="values">
+        <item>1-4</item>
+        <item>5-9</item>
+        <item>10+</item>
+    </string-array>
+
 </resources>
+

@@ -128,14 +128,16 @@
     <string name="none_urgent_date">תאריך האירוע</string>
     <string name="none_urgent_time">זמן  האירוע</string>
     <string name="none_urgent_location">מקום האירוע</string>
-    <string name="none_urgent_role">מה היה חלקך באירוע?</string>
+    <string name="none_urgent_role">חלקך באירוע</string>
     <string name="none_urgent_role_victim">קורבן</string>
+    <string name="none_urgent_role_victim_bold"><b>קורבן</b></string>
     <string name="none_urgent_role_eye_witness">עד ראיה</string>
+    <string name="none_urgent_role_witness_bold"><b>עד ראיה</b></string>
     <string name="none_urgent_other">אחר</string>
-    <string name="none_urgent_name">שם מלא:</string>
-    <string name="none_urgent_id">תעודת זהות:</string>
-    <string name="none_urgent_email">מייל:</string>
-    <string name="none_urgent_additional_contact_info">אמצעי קשר נוסף</string>
+    <string name="none_urgent_name">שם מלא</string>
+    <string name="none_urgent_id">תעודת זהות</string>
+    <string name="none_urgent_email">מייל</string>
+    <string name="none_urgent_additional_contact_info">פרטי האירוע</string>
     <string name="none_urgent_description">תאר את האירוע</string>
     <string name="none_urgent_only_hundred">Be aware you can only use 100 words</string>
     <string name="none_urgent_mendatory">*שדות חובה</string>
@@ -187,7 +189,7 @@
     <string name="select_report_type">בחר את סוג האירוע:</string>
     <string name="time_select_header">Time of occurance:</string>
     <string name="non_urgent_roleexamples">עד ראיה, קורבן וכו</string>
-    <string name="none_urgent_description_header">תיאור האירוע:</string>
+    <string name="none_urgent_description_header">תיאור האירוע</string>
     <string name="initial_report_sent_text">דיווח ראשוני עם מיקומך נשלח למשטרה</string>
     <string name="robbery_type"><b>מהו אופי השוד?</b></string>
     <string name="robbery_type_bank">בנק</string>
@@ -202,5 +204,9 @@
     <string name="block_warning">מספר רב של דיווחי שווא עלולים לגרום לחסימתך</string>
     <string name="notice">לתשומת לבך</string>
 
+    <string-array name="victim_witness_picker_values">
+        <item>קורבן</item>
+        <item>עד-ראיה</item>
+    </string-array>
 
 </resources>

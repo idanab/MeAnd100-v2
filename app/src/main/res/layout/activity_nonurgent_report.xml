@@ -1,30 +1,22 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="fill_parent"
-    android:layout_height="wrap_content" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:layout_height="wrap_content"
     tools:context="com.example.android.meand100_2.reports.GeneralReport"
     android:nestedScrollingEnabled="true">
-
-    <android.support.design.widget.CoordinatorLayout
-        android:id="@+id/main_content"
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
         <ScrollView
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:id="@+id/scrollView2" >
+            android:id="@+id/scrollView2"
+            android:scrollIndicators="none">
 
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true">
+                android:layout_centerHorizontal="true"
+                android:padding="2dp">
 
                 <TextView
                     android:gravity="right"
@@ -36,21 +28,13 @@
                     android:layout_margin="5dp"
                     android:layout_gravity="right" />
 
-                <ImageView
-                    xmlns:android="http://schemas.android.com/apk/res/android"
-                    android:src="@android:drawable/divider_horizontal_bright"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:scaleType="fitXY"
-                    android:paddingLeft="5dp"
-                    android:paddingRight="5dp"
-                    android:paddingBottom="2dp"
-                    android:paddingTop="2dp" />
-
                 <Spinner
                     android:id="@+id/select_report_type_spinner"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:layout_gravity="right"
+                    android:textSize="20pt"
                     android:prompt="@string/select_report_type" />
 
                 <TextView
@@ -63,37 +47,74 @@
                     android:layout_margin="5dp" />
 
 
-                <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
-                    android:src="@android:drawable/divider_horizontal_bright"
-                    android:layout_width="fill_parent"
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:layout_width="0dip"
+                        android:layout_height="26dp"
+                        android:layout_weight="1"
+                        android:textColor="#FFFFFF"
+                        android:text="@string/none_urgent_date"
+                        android:onClick="showDatePickerDialog"
+                        android:id="@+id/pick_date_button"
+                        android:layout_marginRight="0dp"
+                        android:background="#303F9F"
+                        android:layout_margin="5dp"
+/>
+
+                    <Button
+                        android:layout_width="0dip"
+                        android:layout_height="26dp"
+                        android:layout_weight="1"
+                        android:text="@string/none_urgent_time"
+                        android:onClick="showTimePickerDialog"
+                        android:id="@+id/pick_time_button"
+                        android:background="#303F9F"
+                        android:textColor="#FFFFFF"
+                        android:layout_marginRight="0dp"
+                        android:layout_margin="5dp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:scaleType="fitXY"
-                    android:paddingLeft="5dp"
-                    android:paddingRight="5dp"
-                    android:paddingBottom="2dp"
-                    android:paddingTop="2dp"
-                    android:id="@+id/imageView" />
+                    android:gravity="right"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:id="@+id/role_header"
+                    android:text="@string/none_urgent_role"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="right" />
 
                 <LinearLayout
                     android:orientation="horizontal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal">
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
 
                     <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/none_urgent_date"
-                        android:onClick="showDatePickerDialog"
-                        android:id="@+id/pick_date_button" />
+                        android:layout_width="0dip"
+                        android:layout_height="26dp"
+                        android:layout_weight="1"
+                        android:textColor="#FFACA0A0"
+                        android:text="@string/none_urgent_role_victim"
+                        android:id="@+id/victim_btn"
+                        android:layout_marginRight="0dp"
+                        android:background="#FFFFFF"
+                        android:layout_margin="5dp" />
 
                     <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/none_urgent_time"
-                        android:onClick="showTimePickerDialog"
-                        android:id="@+id/pick_time_button" />
-
+                        android:layout_width="0dip"
+                        android:layout_height="26dp"
+                        android:layout_weight="1"
+                        android:textColor="#FFACA0A0"
+                        android:text="@string/none_urgent_role_eye_witness"
+                        android:id="@+id/witness_btn"
+                        android:layout_marginRight="0dp"
+                        android:background="#FFFFFF"
+                        android:layout_margin="5dp" />
                 </LinearLayout>
 
                 <TextView
@@ -106,52 +127,25 @@
                     android:layout_margin="5dp"
                     android:layout_gravity="right" />
 
-                <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
-                    android:src="@android:drawable/divider_horizontal_bright"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:scaleType="fitXY"
-                    android:paddingLeft="5dp"
-                    android:paddingRight="5dp"
-                    android:paddingBottom="2dp"
-                    android:paddingTop="2dp"
-                    android:id="@+id/imageView2" />
-
                 <fragment
                     android:id="@+id/place_autocomplete_fragment"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
-                    />
+                    android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="right"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:id="@+id/role_header"
-                    android:text="@string/none_urgent_role"
-                    android:layout_margin="5dp"
-                    android:layout_gravity="right" />
-
-                <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
-                    android:src="@android:drawable/divider_horizontal_bright"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:scaleType="fitXY"
-                    android:paddingLeft="5dp"
-                    android:paddingRight="5dp"
-                    android:paddingBottom="2dp"
-                    android:paddingTop="2dp"
-                    android:id="@+id/imageView3" />
-
-                <EditText
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/more_details_edittext_layout"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/role_edittext"
-                    android:minLines="1"
-                    android:hint="@string/non_urgent_roleexamples"
-                    android:layout_marginBottom="6dp" />
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/description_edittext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:hint="@string/none_urgent_additional_contact_info"
+                        android:inputType="textNoSuggestions" />
+                </android.support.design.widget.TextInputLayout>
 
                 <LinearLayout
                     android:orientation="horizontal"
@@ -159,111 +153,71 @@
                     android:layout_height="wrap_content"
                     android:weightSum="1">
 
-                    <EditText
-                        android:layout_width="172dp"
-                        android:layout_height="fill_parent"
-                        android:inputType="textPersonName"
-                        android:ems="10"
-                        android:id="@+id/name_edittext"
-                        android:layout_weight="0.90" />
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/input_layout_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:id="@+id/name_header"
-                        android:text="@string/none_urgent_name"
-                        android:layout_margin="5dp" />
+                        <EditText
+                            android:id="@+id/name_edittext"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:hint="@string/none_urgent_name"
+                            android:inputType="textPersonName" />
+                    </android.support.design.widget.TextInputLayout>
 
                 </LinearLayout>
 
-                <LinearLayout
-                    android:orientation="horizontal"
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/idd_edittext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:hint="@string/none_urgent_id"
+                        android:inputType="number" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:weightSum="1">
+                    android:layout_marginBottom="7dp">
 
                     <EditText
-                        android:layout_width="194dp"
+                        android:id="@+id/email_edittext"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="number"
-                        android:ems="10"
-                        android:id="@+id/id_edittext"
-                        android:maxLength="10" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:id="@+id/id_header"
-                        android:text="@string/none_urgent_id"
-                        android:layout_margin="5dp"
-                        android:layout_weight="1.11" />
-                </LinearLayout>
+                        android:singleLine="true"
+                        android:hint="@string/none_urgent_email"
+                        android:inputType="textEmailAddress" />
+                </android.support.design.widget.TextInputLayout>
 
                 <LinearLayout
-                    android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/linear">
+                    android:layout_height="0dip"
+                    android:layout_weight="1"
+                    android:gravity="center|bottom"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="3dp">
 
-                    <EditText
-                        android:layout_width="265dp"
+                    <Button
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="textEmailAddress"
-                        android:ems="10"
-                        android:id="@+id/editText" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:id="@+id/email_header"
-                        android:text="@string/none_urgent_email"
-                        android:layout_margin="5dp" />
-
+                        android:background="?attr/colorPrimaryDark"
+                        android:layout_gravity="bottom"
+                        android:text="@string/send_button"
+                        android:id="@+id/send_button"
+                        android:textSize="20dp"
+                        android:textColor="#FFFFFF"
+                        android:elevation="10dp" />
                 </LinearLayout>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:id="@+id/description_header"
-                    android:gravity="right"
-                    android:text="@string/none_urgent_description_header"
-                    android:layout_margin="5dp"
-                    android:layout_gravity="right" />
-
-                <EditText
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/editText2" />
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:theme="@style/PoliceButtons"
-                    android:background="@drawable/buttonshape"
-                    android:text="@string/send_button"
-                    android:id="@+id/send_button"
-                    android:layout_gravity="center_horizontal" />
 
             </LinearLayout>
         </ScrollView>
-
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/call_100_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|right"
-            android:layout_margin="0dp"
-            android:src="@drawable/call"
-            app:layout_anchor="@id/scrollView2"
-            app:layout_anchorGravity="bottom|right|end"
-            app:borderWidth="0dp"
-            app:elevation="0dp"
-            app:backgroundTint="#e90505" />
-    </android.support.design.widget.CoordinatorLayout>
-
-
 </RelativeLayout>

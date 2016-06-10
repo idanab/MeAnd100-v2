@@ -40,39 +40,16 @@ public class MoreDetailsReport extends AppCompatActivity {
         sendButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (isAllFormFilled()) {
+                //if (isAllFormFilled()) {
                     //send report
                     GeneralStatics.sendSecondaryReport(getApplicationContext(), getIntent().getExtras().getString("reportType"), radioValue, moreInfoText);
                     //TODO: go back to main reports fragment
                     Intent intent = new Intent(getApplicationContext(), MainActivity.class);//go back to main page
                     startActivity(intent);
                     // Commit the transaction
-                }
+                //}
             }
         });
-    }
-
-    private boolean isAllFormFilled() {
-        try{
-            RadioGroup group1 = (RadioGroup) findViewById(R.id.more_first_radio_group);
-            radioValue = ((RadioButton)findViewById(group1.getCheckedRadioButtonId())).getText().toString(); //TODO:not good statement
-            if(group1.getCheckedRadioButtonId()>-1) {
-                return true;
-            }
-            return false;
-        }
-        catch (NullPointerException e) {
-            AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            builder.setMessage(R.string.fill_details)
-                    .setPositiveButton(R.string.continue_txt, new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int id) {
-                            dialog.dismiss();
-                        }
-                    });
-            AlertDialog alert = builder.create();
-            alert.show();
-        }
-        return false;
     }
 
     @Override

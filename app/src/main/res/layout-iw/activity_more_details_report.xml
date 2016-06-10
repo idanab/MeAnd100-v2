@@ -29,63 +29,21 @@
                 android:id="@+id/num_of_casualties_text"
                 android:layout_gravity="right" />
 
-
-
-            <RadioGroup
+            <com.wefika.horizontalpicker.HorizontalPicker
+                android:id="@+id/picker"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/more_first_radio_group"
-                android:gravity="right"
-                android:orientation="horizontal"
-                android:layout_gravity="center">
-
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:button="@null"
-                    android:drawableRight="@android:drawable/btn_radio"
-                    android:gravity="center"
-                    android:text="0"
-                    android:id="@+id/zero_radio"
-                    android:padding="5dp"
-                    android:textSize="20dp" />
-
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:button="@null"
-                    android:drawableRight="@android:drawable/btn_radio"
-                    android:gravity="center"
-                    android:text="1-4"
-                    android:id="@+id/onetofour_radio"
-                    android:checked="false"
-                    android:padding="5dp"
-                    android:textSize="20dp" />
-
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:button="@null"
-                    android:drawableRight="@android:drawable/btn_radio"
-                    android:gravity="center"
-                    android:text="5-10"
-                    android:id="@+id/fivetoten_radio"
-                    android:checked="false"
-                    android:padding="5dp"
-                    android:textSize="20dp" />
-
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:button="@null"
-                    android:drawableRight="@android:drawable/btn_radio"
-                    android:gravity="center"
-                    android:text="10+"
-                    android:id="@+id/morethanten_radio"
-                    android:checked="false"
-                    android:padding="5dp"
-                    android:textSize="20dp" />
-            </RadioGroup>
+                android:textColor="@color/text_color"
+                android:textSize="30sp"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="2"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                app:values="@array/values"
+                app:dividerSize="6dp"
+                app:sideItems="@integer/numSideItems"/>
 
             <TextView
                 android:layout_width="wrap_content"
