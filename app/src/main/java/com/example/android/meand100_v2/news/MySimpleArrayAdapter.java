@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.example.android.meand100_v2.R;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 /**
@@ -18,31 +19,45 @@ import java.util.ArrayList;
 public class MySimpleArrayAdapter extends ArrayAdapter<HeaderStory> {
 
     private final Context context;
-        private final ArrayList<HeaderStory> values;
+    private final ArrayList<HeaderStory> values;
 
-        public MySimpleArrayAdapter(Context context, ArrayList<HeaderStory> values) {
-            super(context, -1, values);
-            this.context = context;
-            this.values = values;
-        }
-
-        @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
-            LayoutInflater inflater = (LayoutInflater) context
-                    .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            View rowView = inflater.inflate(R.layout.story_item, parent, false);
-            ImageView photoImageView = (ImageView) rowView.findViewById(R.id.story_photo);
-            TextView headerTextView = (TextView) rowView.findViewById(R.id.header_text);
-            TextView distanceTextView = (TextView) rowView.findViewById(R.id.distance_text);
-            TextView dateTextView = (TextView) rowView.findViewById(R.id.date_text);
-            TextView timeTextView = (TextView) rowView.findViewById(R.id.time_text);
-            //photoImageView.setImageResource(R.drawable.abc_btn_switch_to_on_mtrl_00012);
-            headerTextView.setText(values.get(position).getHeader());
-            distanceTextView.setText(values.get(position).getLocation().toString());
-            dateTextView.setText(values.get(position).getDate());
-            timeTextView.setText(values.get(position).getTime());
-
-            return rowView;
-        }
+    public MySimpleArrayAdapter(Context context, ArrayList<HeaderStory> values) {
+        super(context, -1, values);
+        this.context = context;
+        this.values = values;
     }
+
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+        LayoutInflater inflater = (LayoutInflater) context
+                .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View rowView = inflater.inflate(R.layout.story_item, parent, false);
+        ImageView photoImageView = (ImageView) rowView.findViewById(R.id.story_photo);
+        TextView headerTextView = (TextView) rowView.findViewById(R.id.header_text);
+        TextView distanceTextView = (TextView) rowView.findViewById(R.id.distance_text);
+        TextView dateTextView = (TextView) rowView.findViewById(R.id.date_text);
+//            TextView timeTextView = (TextView) rowView.findViewById(R.id.time_text);
+        headerTextView.setText(values.get(position).getHeader());
+        distanceTextView.setText(values.get(position).getLocation().toString());
+        dateTextView.setText(values.get(position).getDate());
+//            timeTextView.setText(values.get(position).getTime());
+
+        String imgType = values.get(position).getType();
+        if(imgType.equals("alarm")){
+            photoImageView.setImageResource(R.drawable.tool);
+        }
+        else if(imgType.equals("emergencies")){
+            photoImageView.setImageResource(R.drawable.warning);
+        }
+        else if(imgType.equals("missingPerson")){
+            photoImageView.setImageResource(R.drawable.missingperson);
+        }
+        else if(imgType.equals("policeNews")){
+            photoImageView.setImageResource(R.drawable.policenews);
+        }
+        //photoImageView.setImageResource(R.drawable.abc_btn_switch_to_on_mtrl_00012);
+
+        return rowView;
+    }
+}
 

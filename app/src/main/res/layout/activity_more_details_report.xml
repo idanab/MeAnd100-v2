@@ -27,7 +27,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/casualties_txt"
             android:id="@+id/num_of_casualties_text"
-            android:layout_gravity="right" />
+            android:layout_gravity="left" />
 
 
 
@@ -35,7 +35,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/more_first_radio_group"
-            android:gravity="right"
+            android:gravity="left"
             android:orientation="horizontal"
             android:layout_gravity="center">
 
@@ -43,7 +43,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
+                android:drawableLeft="@android:drawable/btn_radio"
                 android:gravity="center"
                 android:text="0"
                 android:id="@+id/zero_radio"
@@ -54,7 +54,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
+                android:drawableLeft="@android:drawable/btn_radio"
                 android:gravity="center"
                 android:text="1-4"
                 android:id="@+id/onetofour_radio"
@@ -66,7 +66,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
+                android:drawableLeft="@android:drawable/btn_radio"
                 android:gravity="center"
                 android:text="5-10"
                 android:id="@+id/fivetoten_radio"
@@ -78,7 +78,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
+                android:drawableLeft="@android:drawable/btn_radio"
                 android:gravity="center"
                 android:text="10+"
                 android:id="@+id/morethanten_radio"
@@ -92,7 +92,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/add_more_information_txt"
-            android:layout_gravity="right"
+            android:layout_gravity="left"
             android:id="@+id/more_information_text"
             android:layout_marginTop="10dp" />
 

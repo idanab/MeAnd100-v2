@@ -14,13 +14,15 @@ public class HeaderStory extends Story {
     final String header;
     final Location location;
     final GregorianCalendar date;
+    final String type;
 
 
-    public HeaderStory(String id, String header, Location location, GregorianCalendar date) {
+    public HeaderStory(String id, String header, Location location, GregorianCalendar date , String type) {
         super(id);
         this.header = header;
         this.location = location;
         this.date = date;
+        this.type = type;
     }
 
     public String getHeader() {
@@ -33,13 +35,17 @@ public class HeaderStory extends Story {
     }
 
     public String getDate() {
-        SimpleDateFormat fmt = new SimpleDateFormat("dd-MMM-yyyy");
+        SimpleDateFormat fmt = new SimpleDateFormat("dd-MM-yyyy  HH:mm");
         fmt.setCalendar(date);
         String dateFormatted = fmt.format(date.getTime());
         return dateFormatted;
     }
 
     public String getTime() {
-        return  "";
+        SimpleDateFormat fmt = new SimpleDateFormat("HH:mm");
+        fmt.setCalendar(date);
+        String dateFormatted = fmt.format(date.getTime());
+        return dateFormatted;
     }
+    public String getType() {return this.type;}
 }

@@ -1,12 +1,16 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="fill_parent"
-    android:layout_height="fill_parent" tools:context="com.example.android.meand100.NewsFragment"
-    android:background="#FFFFFF">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF"
+    android:paddingBottom="16dp"
+    android:paddingTop="16dp"
+    tools:context="com.example.android.meand100_v2.NewsFragment">
 
 
     <ListView
+        android:id="@+id/stories_listview"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:id="@+id/stories_listview"
         android:layout_gravity="center_horizontal|top" />
 </FrameLayout>

@@ -124,7 +124,7 @@
 
     <!--&lt;!&ndash; ________________________________Specific Reports - None urgent________________________________!&ndash;&gt;-->
 
-    <string name="none_urgent_type">סוג האירוע</string>
+    <string name="none_urgent_type"><b></b>סוג האירוע</string>
     <string name="none_urgent_date">תאריך האירוע</string>
     <string name="none_urgent_time">זמן  האירוע</string>
     <string name="none_urgent_location">מקום האירוע</string>
