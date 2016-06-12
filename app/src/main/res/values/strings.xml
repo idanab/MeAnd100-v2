@@ -43,7 +43,7 @@
     <string name="one_to_four_casualties_txt">1-4</string>
     <string name="five_to_ten_casualties_txt">5-10</string>
     <string name="more_than_ten_casualties_txt">Over 10</string>
-    <string name="add_more_information_txt">Add additional information:</string>
+    <string name="add_more_information_txt">Add additional information</string>
     <string name="call_police_button">Call 100</string>
     <string name="yes_button">Yes</string>
     <string name="no_button">No</string>
@@ -53,7 +53,7 @@
 
     <!--&lt;!&ndash; ________________________________Specific Reports - Terror________________________________!&ndash;&gt;-->
 
-    <string name="report_sent_alert_txt"><b>A report has been sent to the police</b></string>
+    <string name="report_sent_alert_txt"><b>A report has been sent to the police.</b>\nplease provide more details</string>
     <string name="is_terrorist_neutralize_txt">Has the assailant been neutralized?</string>
     <string name="attack_type">State the type of Terror attack in question</string>
     <string name="attack_type_shooting">Shooting</string>
@@ -206,13 +206,15 @@
     <string name="fill_details">Please fill out all details and than hit \'send\'</string>
     <string name="continue_txt">continue</string>
     <string name="notice">To your attention</string>
-    <string name="block_warning">Too much false reports can cause a block blocking your user</string>
+    <string name="block_warning">Too much false reports can cause blocking your user</string>
 
     <string-array name="values">
         <item>1-4</item>
         <item>5-9</item>
         <item>10+</item>
     </string-array>
+    <string name="gps_enable_request">Please enable GPS settings in order to provide the police your current location</string>
+    <string name="add_media">Add media</string>
 
 </resources>
 

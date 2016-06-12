@@ -11,10 +11,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 
 import com.example.android.meand100_v2.reports.types.Call;
 
@@ -30,6 +33,9 @@ public class MoreDetailsReport extends AppCompatActivity {
         setTakePhotoListener();
         setTakeVideoListener();
         setSendButtonAction();
+        TextView reportSentTxt = (TextView) findViewById(R.id.report_sent_text);
+        Animation hyperspaceJump = AnimationUtils.loadAnimation(this, R.anim.hyperspace_jump);
+        reportSentTxt.startAnimation(hyperspaceJump);
 
     }
 
@@ -63,6 +69,7 @@ public class MoreDetailsReport extends AppCompatActivity {
                 dialog.dismiss();
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);//go back to main page
                 startActivity(intent);
+                finish();
             }
         });
         alertDialog.show();

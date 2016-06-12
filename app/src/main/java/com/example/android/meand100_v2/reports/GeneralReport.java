@@ -20,6 +20,7 @@ import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.android.meand100_v2.GeneralStatics;
 import com.example.android.meand100_v2.MainActivity;
@@ -64,6 +65,7 @@ public class GeneralReport extends AppCompatActivity  {
                 dialog.dismiss();
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);//go back to main page
                 startActivity(intent);
+                finish();
             }
         });
         alertDialog.show();
@@ -82,8 +84,6 @@ public class GeneralReport extends AppCompatActivity  {
         catch (NullPointerException e) {
             e.printStackTrace();
         }
-        //double lat=32.085300;
-        //double lon=34.781768;
         GeneralStatics.sendLocation(getApplicationContext(), "lat: " + lat + " lon: " + lon);
         super.onStart();
     }
@@ -94,17 +94,24 @@ public class GeneralReport extends AppCompatActivity  {
         try {
             gps_enabled = mLocationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
             if(!gps_enabled) {
+                Toast.makeText(this, getString(R.string.gps_enable_request), Toast.LENGTH_SHORT).show();
+                /*GeneralStatics.makeToast(this,"GPS is not on");
                 Intent gpsOptionsIntent = new Intent(
                         android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS);
-                startActivity(gpsOptionsIntent);
+                startActivity(gpsOptionsIntent);*/
+                return  null;
             }
-        } catch(Exception ex) {}
-        List<String> providers = mLocationManager.getProviders(true);
-        Location l =null;
-        while (l == null) {
-            l = mLocationManager.getLastKnownLocation(providers.get(0));
+            else {
+                List<String> providers = mLocationManager.getProviders(true);
+                Location l =null;
+                while (l == null) {
+                    l = mLocationManager.getLastKnownLocation(providers.get(0));
+                }
+                return l;
+            }
+        } catch(Exception ex) {
+            return null;
         }
-        return l;
     }
 
     private void setSendButtonAction() {

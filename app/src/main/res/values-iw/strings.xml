@@ -53,7 +53,7 @@
 
     <!--&lt;!&ndash; ________________________________Specific Reports - Terror________________________________!&ndash;&gt;-->
 
-    <string name="report_sent_alert_txt"><b>דיווח אודות האירוע נשלח למשטרה</b></string>
+    <string name="report_sent_alert_txt"><b>דיווח אודות האירוע נשלח למשטרה</b> \nאנא ספק פרטים נוספים</string>
     <string name="is_terrorist_neutralize_txt"><b>האם התוקף נוטרל?</b></string>
     <string name="attack_type"><b>פרט את סוג האירוע</b></string>
     <string name="attack_type_shooting">ירי</string>
@@ -208,5 +208,7 @@
         <item>קורבן</item>
         <item>עד-ראיה</item>
     </string-array>
+    <string name="gps_enable_request">אנא הפעל הגדרות GPS במכשירך על מנת לספק למשטרה מיקום מדויק</string>
+    <string name="add_media">הוסף מדיה</string>
 
 </resources>
