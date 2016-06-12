@@ -60,14 +60,14 @@
                     android:text="@string/not_urgent_report_button"
                     android:id="@+id/non_urgent_button"
                     android:layout_width="260dp"
-                    android:layout_height="50dp"
+                    android:layout_height="wrap_content"
                     android:background="?attr/colorPrimaryDark"
                     android:textColor="#FFFFFF"
                     android:textSize="20dp"
                     android:layout_marginRight="13dp"
                     android:layout_alignParentBottom="true"
                     android:layout_toLeftOf="@+id/call_100_button"
-                    android:layout_marginEnd="30dp" />
+                    android:layout_marginEnd="40dp" />
             </RelativeLayout>
         </LinearLayout>
 

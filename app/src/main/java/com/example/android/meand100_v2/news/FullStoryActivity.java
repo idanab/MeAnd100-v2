@@ -28,18 +28,18 @@ public class FullStoryActivity extends AppCompatActivity  {
         TextView dateTextbox = (TextView) findViewById(R.id.date_text);
         dateTextbox.setText(extras.getString("storyDate"));
         Log.e("date", extras.getString("storyDate"));
-
+        /*
         TextView timeTextbox = (TextView) findViewById(R.id.time_text);
         timeTextbox.setText(extras.getString("storyTime"));
         Log.e("time", extras.getString("storyTime"));
-
+        */
         TextView locationText = (TextView) findViewById(R.id.location_text);
         locationText.setText(extras.getString("storyLocation"));
         Log.e("location", extras.getString("storyLocation"));
 
         //TODO: get full article from server by its "storyID" that you get from the intent
         ImageView imageview = (ImageView) findViewById(R.id.story_photo);
-        TextView summaryTextbox = (TextView) findViewById(R.id.summary_text);
+//        TextView summaryTextbox = (TextView) findViewById(R.id.summary_text);
 
         TextView fullArticleTextbox = (TextView) findViewById(R.id.full_article_text);
 
