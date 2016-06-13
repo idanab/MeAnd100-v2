@@ -53,7 +53,7 @@
 
     <!--&lt;!&ndash; ________________________________Specific Reports - Terror________________________________!&ndash;&gt;-->
 
-    <string name="report_sent_alert_txt"><b>A report has been sent to the police.</b>\nplease provide more details</string>
+    <string name="report_sent_alert_txt"><b>A report has been sent to the police.</b>\nPlease provide more details</string>
     <string name="is_terrorist_neutralize_txt">Has the assailant been neutralized?</string>
     <string name="attack_type">State the type of Terror attack in question</string>
     <string name="attack_type_shooting">Shooting</string>

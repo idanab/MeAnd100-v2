@@ -55,22 +55,12 @@ public class NewsFragment extends Fragment {
 
     private ArrayList<HeaderStory> getStoriesFromServer() {
         storiesArray = new ArrayList<HeaderStory>();
-        storiesArray.add(new HeaderStory ("1", "המחבל שביצע את פיגוע הירי בתלפיות נתפס ונוטרל. תודה לאזרחים שסייעו בכך.", new Location("תל אביב"), new GregorianCalendar(2016 , 2 , 14 , 10 , 39), "alarm"));
-        storiesArray.add(new HeaderStory ("2", "המשטרה מבקשת את עזרת הציבור בחיפוש אחר הנעדר בסיכון- עדי ליברמן", new Location("ירושלים"), new GregorianCalendar(2016 , 2 , 14 ,9  , 30), ""));
-        storiesArray.add(new HeaderStory ("3", "מחר צפוי להיחסם כביש מס' 1 לצורך עבודות תחזוקה החל משעה 22:00 ועד ל5:00 בבוקר ביום שלמחרת", new Location("באר שבע"), new GregorianCalendar(2016 , 2 , 14 , 9 , 0 ), "policeNews"));
-        storiesArray.add(new HeaderStory ("4", "היום בשעה 12:00 תשמע אזעקת תרגול באזור ירושלים. ", new Location("אשדוד"), new GregorianCalendar(2016 , 2 , 14 , 8 , 0),"missingPerson"));
-        storiesArray.add(new HeaderStory ("1", "לרגל יום האישה הבינלאומי אנו רוצים להציג בפניכם שלוש שוטרות המשרתות בתפקידים שונים ומעניינים במשטרת ישראל.", new Location("עפולה"), new GregorianCalendar(2016 , 2 , 13 , 20 , 0), "emergencies"));
-        storiesArray.add(new HeaderStory ("1", "לרגל יום האישה הבינלאומי אנו רוצים להציג בפניכם שלוש שוטרות המשרתות בתפקידים שונים ומעניינים במשטרת ישראל.", new Location("עפולה"), new GregorianCalendar(2016 , 2 , 13 , 20 , 0), "emergencies"));
+        storiesArray.add(new HeaderStory ("1", "לרגל מרוץ השרון ייחסמו מחר מספר רחובות בעיר", new Location("רמת השרון"), new GregorianCalendar(2016 , 5 , 16 , 11 , 55), " policeNews"));        storiesArray.add(new HeaderStory ("1", "מחר בשעה 10:45 תשמע אזעקה באשדוד כחלק מתרגיל חירום של פיקוד העורף", new Location("אשדוד"), new GregorianCalendar(2016 , 2 , 14 , 10 , 39), "alarm"));
+        storiesArray.add(new HeaderStory ("1", "חפץ חשוד אותר בתחנה המרכזית בבאר-שבע, המשטרה מבקשת להימנע מלהגיע לאזור", new Location("באר שבע"), new GregorianCalendar(2016 , 5 , 16 , 10 , 39), " emergencies"));
+        storiesArray.add(new HeaderStory ("2", "המשטרה מבקשת את עזרת הציבור בחיפוש אחר הנעדר בסיכון- עדי ליברמן", new Location("ירושלים"), new GregorianCalendar(2016 , 5 , 16 ,9  , 30), ""));
+        storiesArray.add(new HeaderStory ("2"," המשטרה מבקשת את עזרת הציבור בחיפושיה אחר שלמה מהצרי –מבוקש החשוד במעשה הונאה" ,new Location("כלל ארצי "), new GregorianCalendar(2016 , 5 , 15 ,9  , 30), "missingPerson"));        storiesArray.add(new HeaderStory ("3", "החשש הביטחוני במתחם שרונה הסתיים, ניתן לחזור לשגרת חיים", new Location("תל אביב"), new GregorianCalendar(2016 , 2 , 14 , 9 , 0 ), "emergencies"));
+        storiesArray.add(new HeaderStory ("4", "המפכ\"ל ומשטרת ישראל שולחים ברכה לכלל קציני ושוטרי משטרת ישראל המוסלמים החוגגים את הרמדאן", new Location("אשדוד"), new GregorianCalendar(2016 , 5 , 16 , 8 , 0),"policeNews"));
 
-        /*
-        storiesArray.add(new HeaderStory ("2", "Robbery near Electra building", new Location(""), new GregorianCalendar(2016 , 3 , 14 , 9 , 18)));
-        storiesArray.add(new HeaderStory ("3", "The increased police activity continues", new Location(""), new GregorianCalendar(2016 , 3 , 14 , 9 , 18)));
-        storiesArray.add(new HeaderStory ("4", "250 illegal aliens were arrested", new Location(""), new GregorianCalendar(2016 , 3 , 14 , 9 , 18)));
-        storiesArray.add(new HeaderStory ("1", "Breaking News: Shooting in Talpiot", new Location(""), new GregorianCalendar(2016 , 3 , 14 , 9 , 18)));
-        storiesArray.add(new HeaderStory ("2", "Robbery near Electra building", new Location(""), new GregorianCalendar(2016 , 3 , 14 , 9 , 18)));
-        storiesArray.add(new HeaderStory ("3", "The increased police activity continues", new Location(""), new GregorianCalendar(2016 , 3 , 14 , 9 , 18)));
-        storiesArray.add(new HeaderStory ("4", "250 illegal aliens were arrested", new Location(""), new GregorianCalendar(2016 , 3 , 14 , 9 , 18)));
-        */
         return storiesArray;
     }
 

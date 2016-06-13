@@ -106,8 +106,9 @@ public class NonurgentReport extends AppCompatActivity {
         setSendButtonAction();
         Spinner spinner1 = (Spinner) findViewById(R.id.select_report_type_spinner);
         List<String> list = new ArrayList<String>();
+        list.add("בחר סוג אירוע");
         list.add("גניבת אופניים");
-        list.add("רכב מתפרע");
+        list.add("עבירת תנועה");
         list.add("מפגע רעש");
         list.add("הפרת הסדר הציבורי");
         list.add("אבידה");
