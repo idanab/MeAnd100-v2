@@ -55,8 +55,6 @@ public class ReportFragment extends Fragment {
         });
 
         defineEmergancyDialerListener(root);
-
-
         return root;
     }
 
