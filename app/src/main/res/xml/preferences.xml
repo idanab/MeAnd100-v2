@@ -60,11 +60,6 @@
 
     </PreferenceCategory>
 
-    <SeekBarPreference
-        android:key="pref_sound"
-        android:title="@string/settings_sound"
-        android:summary="@string/settings_sound_summary"/>
-
     <PreferenceCategory
         android:key="pref_accesiblity_category_key"
         android:title="@string/settings_accesibility"
